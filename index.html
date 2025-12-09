@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Gamers</title>
+    <meta name="description" content="The best place to find video games in Montreal.">
+    <link rel="icon" href="/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Icons library -->
+</head>
+
+<body>
+    <header>
+        <div class="sponsors"> <!-- Bar 1 with sponsors -->
+            <div class="sponsor-links">
+                <a class="sponsor-Menu1" href="https://www.matrixcollege.ca/" target="_blank"
+                    rel="noopener noreferrer"><img src="images/matrix-college.png" alt=""></a>
+                <a class="sponsor-Menu1" href="https://www.minecraft.net/" target="_blank"
+                    rel="noopener noreferrer"><img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg" alt=""></a>
+                <a class="sponsor-Menu1" href="https://www.cyberpunk.net/ca/en/" target="_blank" rel="noopener noreferrer"><img
+                        src="https://www.cyberpunk.net/build/images/logo-en-ed943f1c.png" alt=""></a>
+            </div>
+            <form id="sponsor-search-form" class="sponsor-search-form"> <!-- Search form on Bar 1 -->
+                <input type="search" id="search-input" class="sponsor-search" placeholder="Search..."
+                    aria-label="Search site" />
+                <button type="submit" class="search-button" aria-label="Submit search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <nav> <!-- Navigation Menu -->
+        <a class="logo-link active" href="index.html">
+            <img src="/img/logo.png" alt="F1 Montreal Logo" />
+        </a>
+        <button class="hamburger" aria-label="Toggle menu"> <!-- Hamburger icon for responsive view -->
+            <i class="fa-solid fa-ellipsis"></i>
+        </button>
+        <div class="nav-links">
+            <a href="/Login.html">LOGIN</a>
+            <a href="/shop.html">STORE</a>
+            <a href="/Register.html">REGISTRATION</a>
+        </div>
+    </nav>
+
+    <div class="bar2"> <!-- Bar 2 - Next race Info -->
+        <div class="bar2-L">
+            <span class="sponsor-title">Eat, sleep, play, repeat! </span>
+            <a href="https://www.pcgamer.com/games/new-pc-games-2026/" target="_blank"
+                rel="noopener noreferrer"><span>2026 new Games releases calendar</span></a>
+            <div class="race-info">
+                <i class="fa-solid fa-gamepad"></i>
+                <!-- <div class="next-race">
+                    <span>09:00</span><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span>AUG 31</span>
+                </div> -->
+            </div>
+        </div>
+        <div class="bar2-R">
+            <div class="next-race">
+                <i class="fa-regular fa-clock"><span>&nbsp;&nbsp;</span></i>
+                <span>Local Time:&nbsp;&nbsp;</span>
+                <div class="watch" id="watch">00:00:00</div>
+            </div>
+        </div>
+    </div>
+
+    <main class="wrapperPage"> <!-- Page Content -->
+        
+
+    </main>
+
+    <footer>
+        <div class="sponsors2"> <!-- Bar 3 - Oficial sites -->
+            <div class="sponsors2-title">
+                <span>OFFICIAL GAMES DEVELOPERS SITES</span>
+            </div>
+            <div class="sponsors2-logos">
+                <a href="https://www.cdprojektred.com/en" target="_blank" rel="noopener noreferrer"><img
+                        src="https://www.cdprojektred.com/build/images/img/logo-5eac85f8.svg" alt=""></a>
+                <a href="https://www.minecraft.net/en-us/article/meet-mojang-studios" target="_blank" rel="noopener noreferrer"><img
+                        src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Mojang2020Logo.png" alt=""></a>
+                <a href="https://www.ubisoft.com/en-us" target="_blank" rel="noopener noreferrer"><img
+                        src="https://mnd-assets.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_sm,q_auto:good,w_746/tzbyvar2yzvofakliovy" alt=""></a>
+            </div>
+        </div>
+        <div class="contactUs"> <!-- Bar 4 - Social Media -->
+            <div class="sponsors2-title">
+                <span>CONTACT US</span>
+            </div>
+            <div class="contactUs-icons">
+                <a href="https://www.instagram.com/jopoarma/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/jopoarma" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://github.com/Jopoarma" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/+15145827792" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:jopoarma@gmail.com"><i class="fa-solid fa-envelope-open"></i></a>
+            </div>
+            <div class="finalFooter"> <!-- Bar 5 - Page Designed by & Map -->
+                <div class="desingPage">
+                    <span class="by">
+                        <button class="by2 by"  onclick="openPopup()">Designed by Jorge Arce&nbsp;&nbsp;<i
+                                class="fa-solid fa-laptop-code"></i></button>
+                    </span><br>
+                    <!-- <div id="loginPopup" class="overlay">
+                        <div class="popup">
+                            <span class="close" onclick="closePopup()">&times;</span>
+                            <h2>ADMIN LOGIN</h2>
+                            <div id="errorMsg" class="error"></div>
+                            <form id="loginForm">
+                                <input type="text" id="username" placeholder="Username" required /><br>
+                                <input type="password" id="password" placeholder="Password" required /><br>
+                                <button type="submit">Login</button>
+                                <p id="error" style="color:red;"></p>
+                            </form>
+                        </div>
+                    </div> -->
+                    <span class="rights">
+                        All rights reserved © 2025 Vintage Gamers
+                    </span><br>
+                    <span class="rights">
+                        All content on this website, including text, images, logos, and graphics, 
+                        is the property of Vintage Gaming or its content providers and is protected by copyright laws. 
+                        Unauthorized use, reproduction, or distribution of this material is strictly prohibited.
+                    </span>
+                </div>
+                <div class="fullMap">
+                    <div class="addressMap">
+                        <span class="titleMap">Visit our Montréal Store</span>
+                        <span class="titleMap2">300-320, Crémazie East Blvd, Montréal H2P 0C5</span>
+                    </div>
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11187.249121991315!2d-73.5836466!3d45.4937248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a6b57b259cd%3A0xb917de06ed09e438!2sMatrix%20College%20of%20Management%20Technology%20and%20Healthcare%20Inc!5e0!3m2!1sen!2sca!4v1765235510629!5m2!1sen!2sca"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
