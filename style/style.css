@@ -1009,6 +1009,11 @@ select:focus {
     color: var(--bg-white) !important;
 }
 
+/* .logoutBtn {
+    display: none;
+    margin-top:20px;
+} */
+
 /* --- TEAMS --- */
 .accordion {
     color: var(--fonts-menu);

@@ -77,6 +77,27 @@ function updateWatch() {
 setInterval(updateWatch, 1000);
 updateWatch();
 
+// User Login State in Navigation Bar
+window.addEventListener("DOMContentLoaded", () => {
+    const user = localStorage.getItem("loggedUser");
+    const nav = document.querySelector(".bar2-L");
+
+    if (user) {
+        const nickname = JSON.parse(localStorage.getItem("user_" + user)).nickname;
+        const loggedHTML = `
+            <span class="sponsor-title" style="color:var(--fonts-menu); margin:auto 15px auto 50px; text-transform: uppercase">Hi, ${nickname}</span>
+            <a href="javascript:void(0)" class="nav-logout-btn" onclick="logoutFromNav()">Logout</a>
+        `;
+        nav.innerHTML += loggedHTML;
+    }
+});
+
+function logoutFromNav() {
+    localStorage.removeItem("loggedUser");
+    alert("Session ended successfully. See you soon!");
+    location.reload();
+}
+
 // Registration Form in local storage
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 const regForm = document.getElementById("registrationForm");
@@ -192,3 +213,22 @@ if (loginForm) {
         window.location.reload();
     });
 }
+// Logout Button
+const logoutBtn = document.getElementById("logoutBtn");
+const forgotPass = document.getElementById("forgotPass");
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+        localStorage.removeItem("loggedUser");
+        alert("Session ended successfully. See you soon!");
+        window.location.reload();
+    });
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+    const loggedUser = localStorage.getItem("loggedUser");
+    if (loggedUser && logoutBtn) {
+        logoutBtn.style.display = "block";
+        forgotPass.style.display = "none";
+    }
+});
