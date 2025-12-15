@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vintage Gamers</title>
     <meta name="description" content="The best place to find video games in Montreal.">
-    <link rel="icon" href="/img/logo.png" type="image/png">
+    <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="style/style.css">
     <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -18,16 +18,15 @@
     <header>
         <div class="sponsors"> <!-- Bar 1 with sponsors -->
             <div class="sponsor-links">
-                <a class="sponsor-Menu1" href="https://www.matrixcollege.ca/" target="_blank"
-                    rel="noopener noreferrer"><img src="images/matrix-college.png" alt=""></a>
-                <a class="sponsor-Menu1" href="https://www.minecraft.net/" target="_blank"
-                    rel="noopener noreferrer"><img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg" alt=""></a>
-                <a class="sponsor-Menu1" href="https://www.cyberpunk.net/ca/en/" target="_blank" rel="noopener noreferrer"><img
-                        src="https://www.cyberpunk.net/build/images/logo-en-ed943f1c.png" alt=""></a>
+                <a class="sponsor-Menu1" href="https://www.thewitcher.com/ca/en" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.thewitcher.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fen.9f8828c0.png&w=640&q=75" alt=""></a>
+                <a class="sponsor-Menu1" href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg" alt=""></a>
+                <a class="sponsor-Menu1" href="https://www.cyberpunk.net/ca/en/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.cyberpunk.net/build/images/logo-en-ed943f1c.png" alt=""></a>
             </div>
             <form id="sponsor-search-form" class="sponsor-search-form"> <!-- Search form on Bar 1 -->
-                <input type="search" id="search-input" class="sponsor-search" placeholder="Search..."
-                    aria-label="Search site" />
+                <input type="search" id="search-input" class="sponsor-search" placeholder="Search..." aria-label="Search site" />
                 <button type="submit" class="search-button" aria-label="Submit search">
                     <i class="fas fa-search"></i>
                 </button>
@@ -37,15 +36,15 @@
 
     <nav> <!-- Navigation Menu -->
         <a class="logo-link active" href="index.html">
-            <img src="/img/logo.png" alt="F1 Montreal Logo" />
+            <img src="img/logo.png" alt="F1 Montreal Logo" />
         </a>
         <button class="hamburger" aria-label="Toggle menu"> <!-- Hamburger icon for responsive view -->
             <i class="fa-solid fa-ellipsis"></i>
         </button>
         <div class="nav-links">
-            <a href="/Login.html">LOGIN</a>
-            <a href="/shop.html">STORE</a>
-            <a href="/Register.html">REGISTRATION</a>
+            <a href="Login.html">LOGIN</a>
+            <a href="shop.html">STORE</a>
+            <a href="Register.html">REGISTRATION</a>
         </div>
     </nav>
 
@@ -56,9 +55,6 @@
                 rel="noopener noreferrer"><span>2026 new Games releases calendar</span></a>
             <div class="race-info">
                 <i class="fa-solid fa-gamepad"></i>
-                <!-- <div class="next-race">
-                    <span>09:00</span><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span>AUG 31</span>
-                </div> -->
             </div>
         </div>
         <div class="bar2-R">
@@ -71,7 +67,70 @@
     </div>
 
     <main class="wrapperPage"> <!-- Page Content -->
-        
+        <div class="carouselBox"> <!-- Carousel: TOP 3 teams - Selector -->
+            <span class="carouselTitle">Top 3 Best Videogames</span>
+            <input type="radio" name="position" />
+            <input type="radio" name="position" checked />
+            <input type="radio" name="position" />
+            <section id="carousel"> <!-- Carousel Section -->
+                <div class="item pos2"> <!-- Carousel: TOP 3 position 2 -->
+                    <a class="item-link" href="https://www.minecraft.net/" target="_blank"></a>
+                    <div class="infoT">
+                        <span class="posT">2</span>
+                        <span class="posTNum">ND</span>
+                        <img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg" alt="">
+                    </div>
+
+                    <div class="carT carTP2"></div>
+                </div>
+                <div class="item pos1"> <!-- Carousel: TOP 3 position 1 -->
+                    <a class="item-link" href="https://www.cyberpunk.net/ca/en/" target="_blank"></a>
+                    <div class="infoT">
+                        <span class="posT">1</span>
+                        <span class="posTNum">ST</span>
+                        <img src="https://www.cyberpunk.net/build/images/logo-en-ed943f1c.png" alt="">
+                    </div>
+                    <div class="carT carTP1"></div>
+                </div>
+                <div class="item pos3"> <!-- Carousel: TOP 3 position 3 -->
+                    <a class="item-link" href="https://store.ubisoft.com/ca/assassins-creed-shadows/660e5a03fbff4e2940488bcd.html" target="_blank"></a>
+                    <div class="infoT">
+                        <span class="posT">3</span>
+                        <span class="posTNum">RD</span>
+                        <img src="https://store.ubisoft.com/on/demandware.static/-/Library-Sites-shared-library-web/default/dw44ffb996/ACSH/ACR_Logo.png" alt="">
+                    </div>
+                    <div class="carT carTP3"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="topGrid">
+            <div class="videoPlayer">
+                <h3>Minecraft: Survival Mode Gameplay</h3>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ztWgBh-cVwE"
+                    title="😍 MI PRIMERA GRANJA DE ALDEANOS 😍 en SURVIVAL HARDCORE #2 " frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <h3>Cyberpunk 2077: Ultimate Edition</h3>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ugb80d5lxEM"
+                title="Cyberpunk 2077: Ultimate Edition — Official Launch Trailer" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <h3>Assassin's Creed Shadows: Trailer</h3>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/vovkzbtYBC8"
+                title="Assassin&#39;s Creed Shadows: Official World Premiere Trailer" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <h3>Hotline Miami | WHY YOU SHOULD PLAY</h3>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/TPL0eYlAcxQ" title="Hotline Miami | WHY YOU SHOULD PLAY" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+                
 
     </main>
 
