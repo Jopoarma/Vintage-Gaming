@@ -232,3 +232,44 @@ window.addEventListener("DOMContentLoaded", function () {
         forgotPass.style.display = "none";
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Product filtering and sorting
+    const catalog = document.getElementById("game-catalog");
+    const genreFilter = document.getElementById("filter-genre");
+    const platformFilter = document.getElementById("filter-platform");
+    const sortSelect = document.getElementById("sort-price");
+
+    if (catalog && genreFilter && platformFilter && sortSelect) {
+        function updateCatalog() {
+            const genre = genreFilter.value;
+            const platform = platformFilter.value;
+            const sort = sortSelect.value;
+
+            const products = Array.from(catalog.querySelectorAll(".product"));
+
+            // Filter
+            products.forEach(p => {
+                const matchesGenre = !genre || genre === p.dataset.genre;
+                const matchesPlatform = !platform || platform === p.dataset.platform;
+                p.style.display = (matchesGenre && matchesPlatform) ? "block" : "none";
+            });
+
+            // Sort
+            if (sort) {
+                const sorted = products.sort((a, b) =>
+                    sort === "asc"
+                        ? parseFloat(a.dataset.price) - parseFloat(b.dataset.price)
+                        : parseFloat(b.dataset.price) - parseFloat(a.dataset.price)
+                );
+                sorted.forEach(p => catalog.appendChild(p));
+            }
+        }
+
+        genreFilter.addEventListener("change", updateCatalog);
+        platformFilter.addEventListener("change", updateCatalog);
+        sortSelect.addEventListener("change", updateCatalog);
+        updateCatalog();
+    }
+}
+);

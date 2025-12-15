@@ -1009,11 +1009,6 @@ select:focus {
     color: var(--bg-white) !important;
 }
 
-/* .logoutBtn {
-    display: none;
-    margin-top:20px;
-} */
-
 /* --- TEAMS --- */
 .accordion {
     color: var(--fonts-menu);
@@ -1263,8 +1258,10 @@ a.b_link {
 }
 
 .product img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    object-position: center 30%;
     border-radius: 8px;
     margin-bottom: 12px;
     border: 1px solid var(--border);
@@ -1522,6 +1519,68 @@ a.b_link {
 .admin-section form button:hover {
     background-color: var(--font2);
 }
+
+/* Filter game controls */
+.game-controls {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    flex-wrap: nowrap;
+}
+
+.game-controls input,
+.game-controls select {
+    padding: 10px 36px 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    font-family: "Titillium Web", sans-serif;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+/* Search icon */
+/* #search-games {
+    background: url('data:image/svg+xml;utf8,<svg fill="%23777" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"/></svg>') no-repeat 10px center;
+    background-size: 16px 16px;
+    padding-left: 36px;
+} */
+
+.game-controls select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bg-white);
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23777" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    cursor: pointer;
+}
+
+.game-controls input:focus,
+.game-controls select:focus {
+    outline: none;
+    border-color: var(--alert);
+    box-shadow: 0 0 8px rgba(255, 100, 50, 0.4);
+}
+
+.game-controls input::placeholder {
+    color: var(--font1);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* --- RESPONSIVE VIEW FOR MOBILE --- */

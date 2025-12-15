@@ -67,6 +67,138 @@
     </div>
 
     <main class="wrapperPage"> <!-- Page Content -->
+        <section class="game-controls">
+            <select id="filter-genre">
+                <option value="">All Genres</option>
+                <option value="Action">Action</option>
+                <option value="Shooter">Shooter</option>
+                <option value="RPG">RPG</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Platformer">Platformer</option>
+            </select>
+
+            <select id="filter-platform">
+                <option value="">All Platforms</option>
+                <option value="PC">PC</option>
+                <option value="PS5">PS5</option>
+                <option value="Switch">Switch</option>
+            </select>
+
+            <select id="sort-price">
+                <option value="">Sort by Price</option>
+                <option value="asc">Lowest to Highest</option>
+                <option value="desc">Highest to Lowest</option>
+            </select>
+        </section>
+
+        <section class="catalog" id="game-catalog">
+            <div class="product" data-price="69.99" data-genre="RPG" data-platform="PC">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg"
+                    alt="Cyberpunk 2077">
+                <h3>Cyberpunk 2077</h3>
+                <p>Futuristic open-world RPG set in Night City.</p>
+                <p><strong>Price: $69.99</strong></p>
+                <a href="#" data-product="cyberpunk" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="59.99" data-genre="Action" data-platform="PS5">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/ff/Assassin%27s_Creed_Valhalla_cover.jpg"
+                    alt="Assassin's Creed Valhalla">
+                <h3>Assassin's Creed Valhalla</h3>
+                <p>Viking adventure in a massive open-world setting.</p>
+                <p><strong>Price: $59.99</strong></p>
+                <a href="#" data-product="assassins" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="29.99" data-genre="Sandbox" data-platform="PC">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/b6/Minecraft_2024_cover_art.png" alt="Minecraft">
+                <h3>Minecraft</h3>
+                <p>Creative sandbox game for building and exploration.</p>
+                <p><strong>Price: $29.99</strong></p>
+                <a href="#" data-product="minecraft" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="69.99" data-genre="Action" data-platform="PS5">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Star_Wars_Jedi_Survivor.jpg"
+                    alt="Star Wars Jedi: Survivor">
+                <h3>Star Wars Jedi: Survivor</h3>
+                <p>Action-adventure game in the Star Wars universe.</p>
+                <p><strong>Price: $69.99</strong></p>
+                <a href="#" data-product="starwars" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="59.99" data-genre="Action RPG" data-platform="PC">
+                <img src="https://m.media-amazon.com/images/I/6110RSDn3PL._AC_UF350,350_QL50_.jpg" alt="Elden Ring">
+                <h3>Elden Ring</h3>
+                <p>Open-world action RPG with rich lore and exploration.</p>
+                <p><strong>Price: $59.99</strong></p>
+                <a href="#" data-product="eldenring" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="49.99" data-genre="Shooter" data-platform="PC">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/CS2_Cover_Art.jpg/250px-CS2_Cover_Art.jpg"
+                    alt="CS:GO">
+                <h3>Counter-Strike: Global Offensive</h3>
+                <p>Competitive first-person shooter with global tournaments.</p>
+                <p><strong>Price: $49.99</strong></p>
+                <a href="#" data-product="csgo" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="69.99" data-genre="RPG" data-platform="PS5">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Hogwarts_legacyboxart.svg/250px-Hogwarts_legacyboxart.svg.png"
+                    alt="Hogwarts Legacy">
+                <h3>Hogwarts Legacy</h3>
+                <p>Immersive RPG set in the Harry Potter universe.</p>
+                <p><strong>Price: $69.99</strong></p>
+                <a href="#" data-product="hogwarts" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="59.99" data-genre="Adventure" data-platform="Switch">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg/250px-The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg"
+                    alt="Zelda: Tears of the Kingdom">
+                <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                <p>Action-adventure game with exploration and puzzles.</p>
+                <p><strong>Price: $59.99</strong></p>
+                <a href="#" data-product="zelda" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="39.99" data-genre="Platformer" data-platform="Switch">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Super_Mario_Odyssey.jpg/250px-Super_Mario_Odyssey.jpg"
+                    alt="Super Mario Odyssey">
+                <h3>Super Mario Odyssey</h3>
+                <p>3D platforming adventure across creative worlds.</p>
+                <p><strong>Price: $39.99</strong></p>
+                <a href="#" data-product="mario" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="69.99" data-genre="Action RPG" data-platform="PC">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Witcher_3_cover_art.jpg/250px-Witcher_3_cover_art.jpg"
+                    alt="The Witcher 3: Wild Hunt">
+                <h3>The Witcher 3: Wild Hunt</h3>
+                <p>Open-world RPG with an epic story, monster hunting, and choices that matter.</p>
+                <p><strong>Price: $69.99</strong></p>
+                <a href="#" data-product="witcher3" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="49.99" data-genre="Survival" data-platform="PC">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/ArkSurvivalEvolved.png"
+                    alt="ARK: Survival Evolved">
+                <h3>ARK: Survival Evolved</h3>
+                <p>Survive on a mysterious island filled with dinosaurs and prehistoric creatures.</p>
+                <p><strong>Price: $49.99</strong></p>
+                <a href="#" data-product="ark" class="view-details">View Details</a>
+            </div>
+
+            <div class="product" data-price="59.99" data-genre="Action Adventure" data-platform="PS5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCNMOkaXu3XwgBR1O05-oyEXZJZtuk93-0UQ&s"
+                    alt="Marvel's Spider-Man: Miles Morales">
+                <h3>Marvel's Spider-Man: Miles Morales</h3>
+                <p>Action-packed superhero adventure swinging through New York City.</p>
+                <p><strong>Price: $59.99</strong></p>
+                <a href="#" data-product="spiderman" class="view-details">View Details</a>
+            </div>
+
+        </section>
         
     </main>
 
