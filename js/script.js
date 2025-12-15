@@ -233,6 +233,32 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Shopping Cart Function
+let cart = [];
+function updateCart() {
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    if (!cartItems || !cartTotal) return;
+
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, i) => {
+        total += parseFloat(item.price);
+
+        const li = document.createElement("li");
+        li.draggable = true;
+        li.dataset.index = i;
+        li.innerHTML = `${item.name} - $${parseFloat(item.price).toFixed(2)}
+            <button class="remove">Remove</button>`;
+
+        cartItems.appendChild(li);
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     // Product filtering and sorting
     const catalog = document.getElementById("game-catalog");
@@ -271,5 +297,56 @@ document.addEventListener("DOMContentLoaded", () => {
         sortSelect.addEventListener("change", updateCatalog);
         updateCatalog();
     }
+
+    // Modal to see game details
+    const modal = document.getElementById("modal");
+    const addToCartBtn = document.getElementById("add-to-cart");
+
+    if (modal && catalog && addToCartBtn) {
+        const modalTitle = document.getElementById("modal-title");
+        const modalImg = document.getElementById("modal-img");
+        const modalDesc = document.getElementById("modal-desc");
+        const modalPrice = document.getElementById("modal-price");
+
+        catalog.addEventListener("click", e => {
+            if (e.target.classList.contains("view-details")) {
+                e.preventDefault();
+                const product = e.target.closest(".product");
+
+                modalTitle.textContent = product.querySelector("h3").textContent;
+                modalImg.src = product.querySelector("img").src;
+                modalDesc.textContent = product.querySelector("p").textContent;
+                modalPrice.textContent = product.dataset.price;
+
+                addToCartBtn.dataset.product = modalTitle.textContent;
+                addToCartBtn.dataset.price = modalPrice.textContent;
+
+                modal.style.display = "block";
+            }
+        });
+
+        modal.querySelector(".close").addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", e => {
+            if (e.target === modal) modal.style.display = "none";
+        });
+    }
+
+    // Add to cart functionality
+    if (addToCartBtn) {
+        addToCartBtn.addEventListener("click", () => {
+            const name = addToCartBtn.dataset.product;
+            const price = addToCartBtn.dataset.price;
+
+            if (name && price) {
+                cart.push({ name, price });
+                updateCart();
+                modal.style.display = "none";
+            }
+        });
+    }
+
 }
 );
