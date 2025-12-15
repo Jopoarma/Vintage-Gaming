@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -160,4 +159,36 @@ function forgotPassword() {
     } else {
         alert("ERROR: Email not found in our System. Try again.");
     }
+}
+
+// Login Form
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value;
+
+        document.getElementById("loginEmailError").textContent = "";
+        document.getElementById("loginPasswordError").textContent = "";
+        // Validate inputs
+        const userData = localStorage.getItem("user_" + email);
+        if (!userData) {
+            document.getElementById("loginEmailError").textContent = "No account found with this email.";
+            return;
+        }
+
+        const user = JSON.parse(userData);
+        if (user.password !== password) {
+            document.getElementById("loginPasswordError").textContent = "Incorrect password.";
+            return;
+        }
+
+        // Successful login
+        localStorage.setItem("loggedUser", email);
+        alert("Login Successfully!");
+        window.location.reload();
+    });
 }
