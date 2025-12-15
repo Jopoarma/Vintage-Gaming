@@ -1,5 +1,4 @@
-console.log("Script loaded");
-
+//console.log("Script loaded");
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("sponsor-search-form");
@@ -78,3 +77,87 @@ function updateWatch() {
 
 setInterval(updateWatch, 1000);
 updateWatch();
+
+// Registration Form in local storage
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+const regForm = document.getElementById("registrationForm");
+// registration form
+if (regForm) {
+    regForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const ageInput = document.getElementById("age").value.trim();
+        const age = parseInt(ageInput, 10);
+        const nickname = document.getElementById("nickname").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const email = document.getElementById("emailReg").value.trim();
+        const password = document.getElementById("password").value;
+
+        document.querySelectorAll(".error").forEach(e => e.textContent = "");
+        let valid = true;
+
+        // Validation of each field
+        if (name.length < 2) {
+            document.getElementById("nameError").textContent = "Name must be at least 2 characters.";
+            valid = false;
+        }
+
+        if (lastName.length < 2) {
+            document.getElementById("lnameError").textContent = "Last Name must be at least 2 characters.";
+            valid = false;
+        }
+
+        if (!ageInput || isNaN(age)) {
+            document.getElementById("ageError").textContent = "Please enter a valid age.";
+            valid = false;
+        } else if (age < 18) {
+            document.getElementById("ageError").textContent = "The minimum age is 18.";
+            valid = false;
+        }
+
+        if (nickname.length < 6) {
+            document.getElementById("nicknameError").textContent = "Nickname must be at least 6 characters.";
+            valid = false;
+        }
+
+        if (address.length < 6) {
+            document.getElementById("addressError").textContent = "Address must be at least 6 characters.";
+            valid = false;
+        }
+
+        if (!email.includes("@")) {
+            document.getElementById("emailError").textContent = "Enter a valid email.";
+            valid = false;
+        }
+
+        if (!passwordRegex.test(password)) {
+            document.getElementById("passwordError").textContent = "Password does not meet requirements.";
+            valid = false;
+        }
+
+        if (!valid) return;
+
+        // Save in local storage
+        const userData = { name, lastName, age, nickname, address, email, password };
+
+        localStorage.setItem("user_" + email, JSON.stringify(userData));
+        alert("Registration successful!");
+        this.reset();
+    });
+}
+
+// Forgot Password prompt simulation
+function forgotPassword() {
+    const email = prompt("Enter your account email:");
+    if (!email) return;
+
+    const user = localStorage.getItem("user_" + email);
+
+    if (user) {
+        alert("A password reset link has been sented to your email.");
+    } else {
+        alert("ERROR: Email not found in our System. Try again.");
+    }
+}
