@@ -217,30 +217,23 @@
                 <button class="addCart" id="add-to-cart">Add to Cart</button>
             </div>
         </div>
-        <!-- Shopping Cart Section -->
-        <!-- <section class="cart">
-            <h2>Shopping Cart</h2>
-            <ul id="cart-items"></ul>
-            <p>Total: $<span id="cart-total">0.00</span></p>
-            <button id="checkout-btn">Checkout</button>
-            <div id="payment-widget-container" style="display:none; margin-top: 20px;">
-                
-            </div>
-        </section> -->
-        <!-- Cart Modal -->
+        <!-- Shopping Cart modal -->
         <div id="cart-modal" class="modal">
             <div class="modal-content-cart">
                 <span class="close" id="cart-close">&times;</span>
                 <h2>Shopping Cart</h2>
                 <ul id="cart-items"></ul>
-                <p>Total: $<span id="cart-total">0.00</span></p>
+                <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+                <p>Tax (15%): $<span id="cart-tax">0.00</span></p>
+                <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
                 <button id="checkout-btn">Checkout</button>
-                <div id="payment-widget-container" style="display:none; margin-top: 20px;"></div>
+                <div id="payment-widget-container" style="display:none; margin-top: 20px;">
+                    <iframe id="payment-iframe"></iframe>
+                </div>
             </div>
         </div>
 
-        <!-- Optional: Button to open Cart -->
-        <button id="view-cart-btn" class="addCart">View Cart</button>
+
 
     </main>
 

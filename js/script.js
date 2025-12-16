@@ -240,17 +240,20 @@ function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+const TAX_RATE = 0.15;
 function updateCart() {
     const cartItems = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
+    const cartTax = document.getElementById("cart-tax");
+    const cartSubtotal = document.getElementById("cart-subtotal");
 
     if (!cartItems || !cartTotal) return;
 
     cartItems.innerHTML = "";
-    let total = 0;
+    let subtotal = 0;
 
     cart.forEach((item, i) => {
-        total += parseFloat(item.price);
+        subtotal += parseFloat(item.price);
 
         const li = document.createElement("li");
         li.draggable = true;
@@ -263,12 +266,6 @@ function updateCart() {
 
         const span = document.createElement("span");
         span.textContent = `${item.name} - $${parseFloat(item.price).toFixed(2)}`;
-
-        // li.innerHTML = `
-        //     <img src="${item.img}" alt="${item.name}" class="cart-thumb">
-        //     <span>${item.name} - $${parseFloat(item.price).toFixed(2)}</span>
-        //     <button class="remove">Remove</button>
-        // `;
 
         // Remove button
         const removeBtn = document.createElement("button");
@@ -283,10 +280,14 @@ function updateCart() {
         li.appendChild(img);
         li.appendChild(span);
         li.appendChild(removeBtn);
-
         cartItems.appendChild(li);
     });
 
+    const tax = subtotal * TAX_RATE;
+    const total = subtotal + tax;
+
+    if (cartSubtotal) cartSubtotal.textContent = subtotal.toFixed(2);
+    if (cartTax) cartTax.textContent = tax.toFixed(2);
     cartTotal.textContent = total.toFixed(2);
     saveCart();
 }
@@ -383,6 +384,124 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     updateCart();
+
+    // Cart drag & drop
+    const cartItems = document.getElementById("cart-items");
+    if (cartItems) {
+        let draggedIndex = null;
+        cartItems.addEventListener("dragstart", e => {
+            draggedIndex = e.target.dataset.index;
+        });
+        cartItems.addEventListener("dragover", e => e.preventDefault());
+        cartItems.addEventListener("drop", e => {
+            const targetIndex = e.target.dataset.index;
+
+            if (draggedIndex !== null && targetIndex !== null) {
+                const temp = cart[draggedIndex];
+                cart[draggedIndex] = cart[targetIndex];
+                cart[targetIndex] = temp;
+                updateCart();
+            }
+        });
+        updateCart();
+    }
+    updateCart();
+    // ============================================================================
+    // CHECKOUT + IFRAME + REGISTER ORDER (FIXED)
+    // ============================================================================
+    // const checkoutBtn = document.getElementById("checkout-btn");
+    // const paymentContainer = document.getElementById("payment-widget-container");
+
+    // if (checkoutBtn && paymentContainer) {
+
+    //     checkoutBtn.addEventListener("click", () => {
+    //         const loggedUser = localStorage.getItem("loggedUser");
+
+    //         if (!loggedUser) {
+    //             alert("You must be logged in to checkout!");
+    //             return;
+    //         }
+
+    //         paymentContainer.innerHTML = `
+    //             <h3>Complete Your Payment</h3>
+
+    //             <iframe 
+    //                 width="100%" 
+    //                 height="350"
+    //                 style="border:1px solid #ccc; border-radius:8px;"
+    //                 srcdoc="
+    //                     <html>
+    //                     <body style='font-family: Arial; padding: 20px;'>
+    //                         <h2>Payment Details</h2>
+
+    //                         <label>Card Number</label><br>
+    //                         <input type='text' placeholder='1234 5678 9012 3456' 
+    //                             style='width:100%; padding:8px; margin-bottom:12px;'>
+
+    //                         <label>Expiration</label><br>
+    //                         <input type='text' placeholder='MM/YY'
+    //                             style='width:100%; padding:8px; margin-bottom:12px;'>
+
+    //                         <label>CVV</label><br>
+    //                         <input type='password' placeholder='123'
+    //                             style='width:100%; padding:8px; margin-bottom:20px;'>
+
+    //                         <button onclick='parent.postMessage({paymentSuccess:true}, \"*\")'
+    //                             style='width:100%; padding:10px; background:#000; color:#fff;'>
+    //                             Pay Now
+    //                         </button>
+    //                     </body>
+    //                     </html>
+    //                 ">
+    //             </iframe>
+
+    //             <button id="register-order" 
+    //                 style="margin-top:10px; width:100%; padding:10px; background:#000; color:#fff; cursor:pointer;">
+    //                 Register Order
+    //             </button>
+    //         `;
+
+    //         paymentContainer.style.display = "block";
+    //     });
+
+    //     // FIX: Event delegation → always catches button clicks
+    //     paymentContainer.addEventListener("click", (e) => {
+    //         if (e.target.id === "register-order") {
+
+    //             if (cart.length === 0) {
+    //                 alert("Your cart is empty!");
+    //                 return;
+    //             }
+
+    //             alert("Order registered successfully!");
+
+    //             // Clear the cart
+    //             cart.length = 0;
+    //             updateCart();
+
+    //             // Hide widget
+    //             paymentContainer.innerHTML = "";
+    //             paymentContainer.style.display = "none";
+    //         }
+    //     });
+
+    //     // Payment success listener
+    //     window.addEventListener("message", e => {
+    //         if (e.data.paymentSuccess) {
+    //             alert("Payment successful!");
+    //         }
+    //     });
+    // }
+    const checkoutBtn = document.getElementById("checkout-btn");
+    const paymentContainer = document.getElementById("payment-widget-container");
+    const paymentIframe = document.getElementById("payment-iframe");
+
+    checkoutBtn.addEventListener("click", () => {
+        paymentContainer.style.display = "block";
+        paymentIframe.src = "checkout.html";
+    });
+    updateCart(); //CHECK
+
 }
 );
 
@@ -406,3 +525,30 @@ window.addEventListener("click", e => {
         cartModal.style.display = "none";
     }
 });
+
+window.addEventListener("message", (event) => {
+    if (event.data?.type === "PAYMENT_SUCCESS") {
+        alert("Payment successful! 🎉");
+
+        cart = [];
+        updateCart();
+
+        document.getElementById("payment-widget-container").style.display = "none";
+        document.getElementById("cart-modal").style.display = "none";
+    }
+});
+
+// Iframe payment
+function pay() {
+            // Hide form
+            document.getElementById("form").style.display = "none";
+
+            // Show loader
+            document.getElementById("spinner").style.display = "block";
+            document.getElementById("processing").style.display = "block";
+
+            // Fake processing delay
+            setTimeout(() => {
+                parent.postMessage({ type: "PAYMENT_SUCCESS" }, "*");
+            }, 2500);
+        }

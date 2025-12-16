@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Icons library -->
+</head>
+
+<body class="iframe1">
+    <h3>Secure Payment</h3>
+
+    <div id="form">
+        <input type="text" placeholder="Card Number" value="4242 4242 4242 4242">
+        <input type="text" placeholder="MM/YY" value="12/26">
+        <input type="text" placeholder="CVC" value="123">
+        <button onclick="pay()">Pay</button>
+    </div>
+
+    <div class="spinner" id="spinner"></div>
+    <div class="processing" id="processing">Processing payment...</div>
+
+</body>
+
+</html>
