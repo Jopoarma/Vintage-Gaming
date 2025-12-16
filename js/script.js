@@ -106,51 +106,51 @@ if (regForm) {
     regForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const name = document.getElementById("name").value.trim();
-        const lastName = document.getElementById("lastName").value.trim();
-        const ageInput = document.getElementById("age").value.trim();
-        const age = parseInt(ageInput, 10);
-        const nickname = document.getElementById("nickname").value.trim();
-        const address = document.getElementById("address").value.trim();
-        const email = document.getElementById("emailReg").value.trim();
+        // const name = document.getElementById("name").value.trim();
+        // const lastName = document.getElementById("lastName").value.trim();
+        // const ageInput = document.getElementById("age").value.trim();
+        // const age = parseInt(ageInput, 10);
+        // const nickname = document.getElementById("nickname").value.trim();
+        // const address = document.getElementById("address").value.trim();
+        // const email = document.getElementById("emailReg").value.trim();
         const password = document.getElementById("password").value;
 
         document.querySelectorAll(".error").forEach(e => e.textContent = "");
         let valid = true;
 
         // Validation of each field
-        if (name.length < 2) {
-            document.getElementById("nameError").textContent = "Name must be at least 2 characters.";
-            valid = false;
-        }
+        // if (name.length < 2) {
+        //     document.getElementById("nameError").textContent = "Name must be at least 2 characters.";
+        //     valid = false;
+        // }
 
-        if (lastName.length < 2) {
-            document.getElementById("lnameError").textContent = "Last Name must be at least 2 characters.";
-            valid = false;
-        }
+        // if (lastName.length < 2) {
+        //     document.getElementById("lnameError").textContent = "Last Name must be at least 2 characters.";
+        //     valid = false;
+        // }
 
-        if (!ageInput || isNaN(age)) {
-            document.getElementById("ageError").textContent = "Please enter a valid age.";
-            valid = false;
-        } else if (age < 18) {
-            document.getElementById("ageError").textContent = "The minimum age is 18.";
-            valid = false;
-        }
+        // if (!ageInput || isNaN(age)) {
+        //     document.getElementById("ageError").textContent = "Please enter a valid age.";
+        //     valid = false;
+        // } else if (age < 18) {
+        //     document.getElementById("ageError").textContent = "The minimum age is 18.";
+        //     valid = false;
+        // }
 
-        if (nickname.length < 6) {
-            document.getElementById("nicknameError").textContent = "Nickname must be at least 6 characters.";
-            valid = false;
-        }
+        // if (nickname.length < 6) {
+        //     document.getElementById("nicknameError").textContent = "Nickname must be at least 6 characters.";
+        //     valid = false;
+        // }
 
-        if (address.length < 6) {
-            document.getElementById("addressError").textContent = "Address must be at least 6 characters.";
-            valid = false;
-        }
+        // if (address.length < 6) {
+        //     document.getElementById("addressError").textContent = "Address must be at least 6 characters.";
+        //     valid = false;
+        // }
 
-        if (!email.includes("@")) {
-            document.getElementById("emailError").textContent = "Enter a valid email.";
-            valid = false;
-        }
+        // // if (!email.includes("@")) {
+        // //     document.getElementById("emailError").textContent = "Enter a valid email.";
+        // //     valid = false;
+        // // }
 
         if (!passwordRegex.test(password)) {
             document.getElementById("passwordError").textContent = "Password does not meet requirements.";
@@ -406,104 +406,34 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCart();
     }
     updateCart();
-    // ============================================================================
-    // CHECKOUT + IFRAME + REGISTER ORDER (FIXED)
-    // ============================================================================
-    // const checkoutBtn = document.getElementById("checkout-btn");
-    // const paymentContainer = document.getElementById("payment-widget-container");
 
-    // if (checkoutBtn && paymentContainer) {
-
-    //     checkoutBtn.addEventListener("click", () => {
-    //         const loggedUser = localStorage.getItem("loggedUser");
-
-    //         if (!loggedUser) {
-    //             alert("You must be logged in to checkout!");
-    //             return;
-    //         }
-
-    //         paymentContainer.innerHTML = `
-    //             <h3>Complete Your Payment</h3>
-
-    //             <iframe 
-    //                 width="100%" 
-    //                 height="350"
-    //                 style="border:1px solid #ccc; border-radius:8px;"
-    //                 srcdoc="
-    //                     <html>
-    //                     <body style='font-family: Arial; padding: 20px;'>
-    //                         <h2>Payment Details</h2>
-
-    //                         <label>Card Number</label><br>
-    //                         <input type='text' placeholder='1234 5678 9012 3456' 
-    //                             style='width:100%; padding:8px; margin-bottom:12px;'>
-
-    //                         <label>Expiration</label><br>
-    //                         <input type='text' placeholder='MM/YY'
-    //                             style='width:100%; padding:8px; margin-bottom:12px;'>
-
-    //                         <label>CVV</label><br>
-    //                         <input type='password' placeholder='123'
-    //                             style='width:100%; padding:8px; margin-bottom:20px;'>
-
-    //                         <button onclick='parent.postMessage({paymentSuccess:true}, \"*\")'
-    //                             style='width:100%; padding:10px; background:#000; color:#fff;'>
-    //                             Pay Now
-    //                         </button>
-    //                     </body>
-    //                     </html>
-    //                 ">
-    //             </iframe>
-
-    //             <button id="register-order" 
-    //                 style="margin-top:10px; width:100%; padding:10px; background:#000; color:#fff; cursor:pointer;">
-    //                 Register Order
-    //             </button>
-    //         `;
-
-    //         paymentContainer.style.display = "block";
-    //     });
-
-    //     // FIX: Event delegation → always catches button clicks
-    //     paymentContainer.addEventListener("click", (e) => {
-    //         if (e.target.id === "register-order") {
-
-    //             if (cart.length === 0) {
-    //                 alert("Your cart is empty!");
-    //                 return;
-    //             }
-
-    //             alert("Order registered successfully!");
-
-    //             // Clear the cart
-    //             cart.length = 0;
-    //             updateCart();
-
-    //             // Hide widget
-    //             paymentContainer.innerHTML = "";
-    //             paymentContainer.style.display = "none";
-    //         }
-    //     });
-
-    //     // Payment success listener
-    //     window.addEventListener("message", e => {
-    //         if (e.data.paymentSuccess) {
-    //             alert("Payment successful!");
-    //         }
-    //     });
-    // }
+    // Checkout with iframe and user logged validation
     const checkoutBtn = document.getElementById("checkout-btn");
     const paymentContainer = document.getElementById("payment-widget-container");
     const paymentIframe = document.getElementById("payment-iframe");
 
-    checkoutBtn.addEventListener("click", () => {
-        paymentContainer.style.display = "block";
-        paymentIframe.src = "checkout.html";
-    });
-    updateCart(); //CHECK
+    if (checkoutBtn && paymentContainer) {
+        checkoutBtn.addEventListener("click", () => {
+            const loggedUser = localStorage.getItem("loggedUser");
+            if (!loggedUser && cart.length === 0) {
+                alert("Your cart is empty and you must be logged in to checkout!");
+            }
+            else if (loggedUser && cart.length === 0) {
+                alert("Your cart is empty!");
+            }
+            else if (!loggedUser) {
+                alert("You must be logged in to checkout!");
+                return;
+            }
+            else if (loggedUser && cart.length > 0) {
+                paymentContainer.style.display = "block";
+                paymentIframe.src = "checkout.html";
+            }
 
-}
-);
+        });
+    }
+    updateCart();
+});
 
 const cartModal = document.getElementById("cart-modal");
 const cartClose = document.getElementById("cart-close");
@@ -528,27 +458,10 @@ window.addEventListener("click", e => {
 
 window.addEventListener("message", (event) => {
     if (event.data?.type === "PAYMENT_SUCCESS") {
-        alert("Payment successful! 🎉");
-
+        alert("Payment successful! The fun is on its way!...");
         cart = [];
         updateCart();
-
         document.getElementById("payment-widget-container").style.display = "none";
         document.getElementById("cart-modal").style.display = "none";
     }
 });
-
-// Iframe payment
-function pay() {
-            // Hide form
-            document.getElementById("form").style.display = "none";
-
-            // Show loader
-            document.getElementById("spinner").style.display = "block";
-            document.getElementById("processing").style.display = "block";
-
-            // Fake processing delay
-            setTimeout(() => {
-                parent.postMessage({ type: "PAYMENT_SUCCESS" }, "*");
-            }, 2500);
-        }

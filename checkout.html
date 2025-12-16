@@ -15,17 +15,79 @@
 
 <body class="iframe1">
     <h3>Secure Payment</h3>
+    <form id="paymentForm">
+        <!-- Card Number -->
+        <input type="text" id="card-number" placeholder="Card Number" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}"
+            required title="Enter a valid 16-digit card number in 4 groups, e.g. 4242 4242 4242 4242" />
+        <!-- Expiration Date -->
+        <input type="text" id="card-exp" placeholder="MM/YY" maxlength="5" pattern="(0[1-9]|1[0-2])\/\d{2}" required
+            title="Enter a valid expiration date in MM/YY format" />
+        <!-- CVC -->
+        <input type="text" id="card-cvc" placeholder="CVC" maxlength="4" pattern="\d{3,4}" required
+            title="Enter a 3 or 4 digit CVC" />
+        <button type="submit">Pay</button>
+    </form>
 
-    <div id="form">
-        <input type="text" placeholder="Card Number" value="4242 4242 4242 4242">
-        <input type="text" placeholder="MM/YY" value="12/26">
-        <input type="text" placeholder="CVC" value="123">
-        <button onclick="pay()">Pay</button>
-    </div>
+    <div class="spinner" id="spinner" style="display:none;"></div>
+    <div class="processing" id="processing" style="display:none;">Processing payment...</div>
 
-    <div class="spinner" id="spinner"></div>
-    <div class="processing" id="processing">Processing payment...</div>
+    <script>
+        const paymentForm = document.getElementById("paymentForm");
+        const cardInput = document.getElementById("card-number");
+        const expiryInput = document.getElementById("card-exp");
+        const cvcInput = document.getElementById("card-cvc");
 
+        paymentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const rawCard = cardInput.value.replace(/\s/g, "");
+            const rawExp = expiryInput.value.trim();
+            const rawCVC = cvcInput.value.trim();
+            if (rawCard.length !== 16 || /\D/.test(rawCard)) {
+                alert("Card number must be 16 digits.");
+                cardInput.focus();
+                return;
+            }
+
+            if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(rawExp)) {
+                alert("Enter a valid expiry MM/YY.");
+                expiryInput.focus();
+                return;
+            }
+
+            if (!/^\d{3,4}$/.test(rawCVC)) {
+                alert("CVC must be 3 or 4 digits.");
+                cvcInput.focus();
+                return;
+            }
+
+            if (rawCard !== "7777777777777777") {
+                alert("Card number ivalid, plese enter a valid one.");
+                cardInput.focus();
+                cardInput.style.border = "2px solid red";
+                return;
+            }
+            paymentForm.style.display = "none";
+            document.getElementById("spinner").style.display = "block";
+            document.getElementById("processing").style.display = "block";
+
+            setTimeout(() => {
+                parent.postMessage({ type: "PAYMENT_SUCCESS" }, "*");
+            }, 2500);
+        });
+
+        // Format card number
+        cardInput.addEventListener("input", () => {
+            let value = cardInput.value.replace(/\D/g, "").substring(0, 16);
+            cardInput.value = value.replace(/(.{4})/g, "$1 ").trim();
+        });
+
+        // Format expiry date
+        expiryInput.addEventListener("input", () => {
+            let value = expiryInput.value.replace(/\D/g, "");
+            if (value.length > 2) value = value.substring(0, 2) + "/" + value.substring(2, 4);
+            expiryInput.value = value;
+        });
+    </script>
 </body>
-
 </html>

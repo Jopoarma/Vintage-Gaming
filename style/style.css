@@ -1296,14 +1296,16 @@ a.b_link {
     color: var(--bg-full);
     text-decoration: none;
     border-radius: 25px;
+    border: 2px solid var(--menuColor);
     font-weight: 600;
     font-family: "Titillium Web", sans-serif;
-    transition: background-color 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .product a.view-details:hover {
     background-color: var(--alert);
     color: var(--fonts-menu);
+    border: 2px solid var(--mercedez-2);
 }
 
 #product-details {
@@ -1652,12 +1654,22 @@ a.b_link {
 }
 
 #cart-items li button.remove {
-    background: var(--alert);
-    border: none;
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: var(--alert);
     color: var(--fonts-menu);
-    padding: 2px 6px;
-    border-radius: 4px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cart-items li button.remove:hover {
+    background-color: var(--menuColor);
+    color: var(--bg-full);
 }
 
 .modal-content-cart {
@@ -1685,7 +1697,7 @@ a.b_link {
     margin: 6px 0;
     padding: 5px 10px;
     background-color: var(--mercedez-2);
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: grab;
     color: var(--mercedez-1);
 }
@@ -1695,7 +1707,8 @@ a.b_link {
     height: 35px !important;
     object-fit: cover;
     flex-shrink: 0;
-    border-radius: 3px;
+    border-radius: 5px;
+    border: var(--bg-full);
     margin: auto 10px auto 0px;
 
 }
@@ -1717,6 +1730,7 @@ a.b_link {
     outline: none;
     font-size: 40px;
     color: var(--fonts-menu);
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -1777,6 +1791,25 @@ a.b_link {
     color: var(--alert);
 } */
 
+.checkout-button {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: var(--menuColor);
+    color: var(--bg-full);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: var(--alert);
+    color: var(--fonts-menu);
+}
+
 /* Checkout and Payment */
 #payment-iframe {
     width: 100%;
@@ -1793,47 +1826,66 @@ a.b_link {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 90%;
-    /* background: #f4f4f4; */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .iframe1 h3 {
     color: var(--fonts-menu);
     font-size: 1.5rem;
-    margin: 15px auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
 }
 
 .iframe1 input {
-    width: 90%;
-    margin: 0 auto 15px auto;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
     border: 3px solid var(--menuColor);
     background-color: var(--bg-2);
     color: var(--mercedez-2);
+    border-radius: 5px;
+    text-align: center;
 }
 
 .iframe1 button {
-    width: 90%;
-    padding: 10px auto 10px 30px;
-    margin: 8px 0;
-}
-
-.iframe1 button {
-    background: #28a745;
-    color: #fff;
-    border: none;
+    background-color: var(--bg-2);
+    border-color: var(--menuColor);
+    color: var(--mercedez-2);
+    padding: 0.75rem 4rem;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin: 15px auto;
+}
+
+.iframe1 button:hover {
+    background-color: var(--menuColor);
+    border-color: var(--mercedez-2);
+    color: var(--bg-2);
 }
 
 .spinner {
     display: none;
     margin: 20px auto;
-    width: 50px;
-    height: 50px;
-    border: 5px solid #ddd;
-    border-top: 5px solid #28a745;
+    width: 75px;
+    height: 75px;
+    border: 9px solid var(--menuColor);
+    border-top: 9px solid var(--mercedez-2);
     border-radius: 50%;
     animation: spin 1s linear infinite;
+    box-shadow: 0 0 14px var(--menuColor), inset 0 0 14px var(--menuColor);
 }
 
 @keyframes spin {
@@ -1846,6 +1898,8 @@ a.b_link {
     display: none;
     text-align: center;
     font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--fonts-menu);
     margin-top: 10px;
 }
 
