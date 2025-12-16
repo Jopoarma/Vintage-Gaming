@@ -46,6 +46,9 @@
             <a href="shop.html">STORE</a>
             <a href="Register.html">REGISTRATION</a>
         </div>
+        <div class="menu-cart">
+            <button id="view-cart-btn" class="cart-icon"><i class="fa-solid fa-cart-arrow-down"></i></button>
+        </div>
     </nav>
 
     <div class="bar2"> <!-- Bar 2 - Next race Info -->
@@ -94,6 +97,16 @@
                 <div id="loginSuccessMessage" class="success-message"></div>
                 <!-- Logout button -->
                 <button id="logoutBtn" style="display: none; margin-top:20px;">Logout</button>
+            </div>
+        </div>
+        <div id="cart-modal" class="modal">
+            <div class="modal-content-cart">
+                <span class="close" id="cart-close">&times;</span>
+                <h2>Shopping Cart</h2>
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button id="checkout-btn">Checkout</button>
+                <div id="payment-widget-container" style="display:none; margin-top: 20px;"></div>
             </div>
         </div>
     </main>

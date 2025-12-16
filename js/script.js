@@ -234,7 +234,12 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 // Shopping Cart Function
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 function updateCart() {
     const cartItems = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
@@ -250,13 +255,40 @@ function updateCart() {
         const li = document.createElement("li");
         li.draggable = true;
         li.dataset.index = i;
-        li.innerHTML = `${item.name} - $${parseFloat(item.price).toFixed(2)}
-            <button class="remove">Remove</button>`;
+
+        const img = document.createElement("img");
+        img.src = item.img;
+        img.alt = item.name;
+        img.className = "cart-thumb";
+
+        const span = document.createElement("span");
+        span.textContent = `${item.name} - $${parseFloat(item.price).toFixed(2)}`;
+
+        // li.innerHTML = `
+        //     <img src="${item.img}" alt="${item.name}" class="cart-thumb">
+        //     <span>${item.name} - $${parseFloat(item.price).toFixed(2)}</span>
+        //     <button class="remove">Remove</button>
+        // `;
+
+        // Remove button
+        const removeBtn = document.createElement("button");
+        removeBtn.className = "remove";
+        removeBtn.textContent = "Remove";
+        removeBtn.addEventListener("click", () => {
+            cart.splice(i, 1);
+            updateCart();
+        });
+
+        // Append all to li
+        li.appendChild(img);
+        li.appendChild(span);
+        li.appendChild(removeBtn);
 
         cartItems.appendChild(li);
     });
 
     cartTotal.textContent = total.toFixed(2);
+    saveCart();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -320,6 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 addToCartBtn.dataset.product = modalTitle.textContent;
                 addToCartBtn.dataset.price = modalPrice.textContent;
+                addToCartBtn.dataset.img = modalImg.src;
 
                 modal.style.display = "block";
             }
@@ -339,14 +372,37 @@ document.addEventListener("DOMContentLoaded", () => {
         addToCartBtn.addEventListener("click", () => {
             const name = addToCartBtn.dataset.product;
             const price = addToCartBtn.dataset.price;
+            const imgSrc = addToCartBtn.dataset.img;
 
             if (name && price) {
-                cart.push({ name, price });
+                cart.push({ name, price, img: imgSrc });
                 updateCart();
                 modal.style.display = "none";
+                cartModal.style.display = "block";
             }
         });
     }
-
+    updateCart();
 }
 );
+
+const cartModal = document.getElementById("cart-modal");
+const cartClose = document.getElementById("cart-close");
+const viewCartBtn = document.getElementById("view-cart-btn");
+
+// Open cart modal
+viewCartBtn.addEventListener("click", () => {
+    cartModal.style.display = "block";
+});
+
+// Close cart modal
+cartClose.addEventListener("click", () => {
+    cartModal.style.display = "none";
+});
+
+// Close if clicking outside the modal content
+window.addEventListener("click", e => {
+    if (e.target === cartModal) {
+        cartModal.style.display = "none";
+    }
+});

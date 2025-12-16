@@ -18,15 +18,20 @@
     <header>
         <div class="sponsors"> <!-- Bar 1 with sponsors -->
             <div class="sponsor-links">
-                <a class="sponsor-Menu1" href="https://www.thewitcher.com/ca/en" target="_blank" rel="noopener noreferrer">
-                    <img src="https://www.thewitcher.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fen.9f8828c0.png&w=640&q=75" alt=""></a>
+                <a class="sponsor-Menu1" href="https://www.thewitcher.com/ca/en" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="https://www.thewitcher.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fen.9f8828c0.png&w=640&q=75"
+                        alt=""></a>
                 <a class="sponsor-Menu1" href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg" alt=""></a>
-                <a class="sponsor-Menu1" href="https://www.cyberpunk.net/ca/en/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg"
+                        alt=""></a>
+                <a class="sponsor-Menu1" href="https://www.cyberpunk.net/ca/en/" target="_blank"
+                    rel="noopener noreferrer">
                     <img src="https://www.cyberpunk.net/build/images/logo-en-ed943f1c.png" alt=""></a>
             </div>
             <form id="sponsor-search-form" class="sponsor-search-form"> <!-- Search form on Bar 1 -->
-                <input type="search" id="search-input" class="sponsor-search" placeholder="Search..." aria-label="Search site" />
+                <input type="search" id="search-input" class="sponsor-search" placeholder="Search..."
+                    aria-label="Search site" />
                 <button type="submit" class="search-button" aria-label="Submit search">
                     <i class="fas fa-search"></i>
                 </button>
@@ -45,6 +50,9 @@
             <a href="Login.html">LOGIN</a>
             <a class="active" href="shop.html">STORE</a>
             <a href="Register.html">REGISTRATION</a>
+        </div>
+        <div class="menu-cart">
+            <button id="view-cart-btn" class="cart-icon"><i class="fa-solid fa-cart-arrow-down"></i></button>
         </div>
     </nav>
 
@@ -210,15 +218,30 @@
             </div>
         </div>
         <!-- Shopping Cart Section -->
-        <section class="cart">
+        <!-- <section class="cart">
             <h2>Shopping Cart</h2>
             <ul id="cart-items"></ul>
             <p>Total: $<span id="cart-total">0.00</span></p>
             <button id="checkout-btn">Checkout</button>
             <div id="payment-widget-container" style="display:none; margin-top: 20px;">
-                <!-- Payment iframe will be injected here -->
+                
             </div>
-        </section>
+        </section> -->
+        <!-- Cart Modal -->
+        <div id="cart-modal" class="modal">
+            <div class="modal-content-cart">
+                <span class="close" id="cart-close">&times;</span>
+                <h2>Shopping Cart</h2>
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button id="checkout-btn">Checkout</button>
+                <div id="payment-widget-container" style="display:none; margin-top: 20px;"></div>
+            </div>
+        </div>
+
+        <!-- Optional: Button to open Cart -->
+        <button id="view-cart-btn" class="addCart">View Cart</button>
+
     </main>
 
     <footer>
