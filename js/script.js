@@ -114,6 +114,7 @@ if (regForm) {
         // const address = document.getElementById("address").value.trim();
         // const email = document.getElementById("emailReg").value.trim();
         const password = document.getElementById("password").value;
+        const passInput = document.getElementById("password");
 
         document.querySelectorAll(".error").forEach(e => e.textContent = "");
         let valid = true;
@@ -154,6 +155,7 @@ if (regForm) {
 
         if (!passwordRegex.test(password)) {
             document.getElementById("passwordError").textContent = "Password does not meet requirements.";
+            passInput.focus();
             valid = false;
         }
 
@@ -166,6 +168,21 @@ if (regForm) {
         alert("Registration successful!");
         this.reset();
     });
+}
+
+// Default user for testing
+const defaultUser = {
+    name: "Admin",
+    lastName: "Root",
+    age: 32,
+    nickname: "SuperUser",
+    address: "123 Street",
+    email: "admin@vintage-gaming.com",
+    password: "J0p0@dmin"
+};
+if (!localStorage.getItem("user_" + defaultUser.email)) {
+    localStorage.setItem("user_" + defaultUser.email, JSON.stringify(defaultUser));
+    console.log("Default user added to localStorage.");
 }
 
 // Forgot Password prompt simulation

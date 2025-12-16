@@ -17,14 +17,18 @@
     <h3>Secure Payment</h3>
     <form id="paymentForm">
         <!-- Card Number -->
-        <input type="text" id="card-number" placeholder="Card Number" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}"
-            required title="Enter a valid 16-digit card number in 4 groups, e.g. 4242 4242 4242 4242" />
-        <!-- Expiration Date -->
-        <input type="text" id="card-exp" placeholder="MM/YY" maxlength="5" pattern="(0[1-9]|1[0-2])\/\d{2}" required
-            title="Enter a valid expiration date in MM/YY format" />
-        <!-- CVC -->
-        <input type="text" id="card-cvc" placeholder="CVC" maxlength="4" pattern="\d{3,4}" required
-            title="Enter a 3 or 4 digit CVC" />
+        <input class="iframe-card" type="text" id="card-number" placeholder="Card Number" maxlength="19"
+            pattern="\d{4} \d{4} \d{4} \d{4}" required
+            title="Enter a valid 16-digit card number, e.g. 4242 4242 4242 4242" />
+        <div class="card-row">
+            <!-- Expiration Date -->
+            <input class="iframe-date" type="text" id="card-exp" placeholder="MM/YY" maxlength="5"
+                pattern="(0[1-9]|1[0-2])\/\d{2}" required title="Enter a valid expiration date in MM/YY format" />
+            <!-- CVC -->
+            <input class="iframe-cvc" type="text" id="card-cvc" placeholder="CVC" maxlength="4" pattern="\d{3,4}"
+                required title="Enter a 3 or 4 digit CVC" />
+        </div>
+
         <button type="submit">Pay</button>
     </form>
 
@@ -62,7 +66,7 @@
             }
 
             if (rawCard !== "7777777777777777") {
-                alert("Card number ivalid, plese enter a valid one.");
+                alert("Card number invalid, please enter a valid one.");
                 cardInput.focus();
                 cardInput.style.border = "2px solid red";
                 return;
@@ -90,4 +94,5 @@
         });
     </script>
 </body>
+
 </html>

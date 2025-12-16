@@ -99,14 +99,30 @@
                 <button id="logoutBtn" style="display: none; margin-top:20px;">Logout</button>
             </div>
         </div>
+        <!-- Modal to see game details -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-img" src="" alt="">
+                <p id="modal-desc"></p>
+                <p><strong>Price: $<span id="modal-price"></span></strong></p>
+                <button class="addCart" id="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <!-- Shopping Cart modal -->
         <div id="cart-modal" class="modal">
             <div class="modal-content-cart">
                 <span class="close" id="cart-close">&times;</span>
                 <h2>Shopping Cart</h2>
                 <ul id="cart-items"></ul>
-                <p>Total: $<span id="cart-total">0.00</span></p>
-                <button id="checkout-btn">Checkout</button>
-                <div id="payment-widget-container" style="display:none; margin-top: 20px;"></div>
+                <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+                <p>Tax (15%): $<span id="cart-tax">0.00</span></p>
+                <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+                <button class="checkout-button" id="checkout-btn">Checkout</button>
+                <div id="payment-widget-container" style="display:none; margin-top: 20px;">
+                    <iframe id="payment-iframe"></iframe>
+                </div>
             </div>
         </div>
     </main>

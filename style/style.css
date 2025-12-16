@@ -86,7 +86,7 @@ body {
     background: transparent;
     padding: 2px 6px;
     width: 140px;
-    color: var(--fonts-menu);
+    color: var(--mercedez-2);
 }
 
 .search-button {
@@ -362,10 +362,8 @@ main {
 .sponsors2-logos a img:hover {
     height: 55px;
     width: auto;
-    /* background-color: var(--font2); */
     border: none;
     padding: 10px 15px;
-    /* border-radius: 60px 15px; */
     transition: all 0.4s ease;
 }
 
@@ -880,9 +878,9 @@ textarea {
     padding: 0.5rem 0 0.5rem 0.5rem;
     border: 3px solid var(--mercedez-2);
     border-radius: 4px;
-    color: var(--font2);
+    color: var(--mercedez-2);
     font-size: 16px;
-    background-color: var(--fonts-menu);
+    background-color: var(--bg-2);
     outline: none;
     transition: box-shadow .15s ease, border-color .15s ease;
 }
@@ -890,7 +888,6 @@ textarea {
 input:focus,
 textarea:focus {
     border: 3px solid var(--menuColor);
-    /* border-color: var(--alert); */
     box-shadow: 0 0 0 3px var(--shadows);
 }
 
@@ -955,12 +952,6 @@ select:focus {
 .checkbox-group input[type="checkbox"] {
     margin-right: 8px;
     transform: scale(1.2);
-}
-
-.error {
-    color: var(--alert);
-    font-size: 14px;
-    margin-top: 0.25rem;
 }
 
 .success-message {
@@ -1240,7 +1231,6 @@ a.b_link {
 
 .product {
     flex: 0 0 calc(25% - 20px);
-    /* fixed width per card */
     box-sizing: border-box;
     min-height: 580px;
     border: 1px solid var(--border);
@@ -1355,175 +1345,11 @@ a.b_link {
     border: none;
 }
 
-
-
-
-
-/* Overlay background */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--hamb-menu);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Popup box */
-.popup {
-    background: var(--fonts-menu);
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px var(--border);
-    width: 300px;
-    position: relative;
-}
-
-.popup h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-family: "Titillium Web", sans-serif;
-    color: var(--font2);
-}
-
-.popup form input[type="text"],
-.popup form input[type="password"] {
-    width: 93%;
-    padding: 10px 10px;
-    margin: 10px 0;
-    border: 1px solid var(--bg-white);
-    border-radius: 5px;
-}
-
-.popup button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background: var(--border);
-    color: var(--fonts-menu);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: "Titillium Web", sans-serif;
-}
-
-.popup button[type="submit"]:hover {
-    background: var(--font2);
-}
-
-.close {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 25px;
-    cursor: pointer;
-    color: var(--border);
-}
-
 .error {
     color: var(--alert);
     font-size: 18px;
-}
-
-
-
-/* --- Admin Panel --- */
-.wrapperPage h1 {
-    color: var(--fonts-menu);
-    font-family: "Titillium Web", sans-serif;
-}
-
-.admin-menu {
-    margin: 20px 0;
-    background-color: var(--bg-full);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.admin-menu button {
-    background-color: var(--border);
-    color: var(--fonts-menu);
-    border: 1px solid var(--alert);
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin-right: 10px;
-}
-
-.admin-menu button:hover,
-.admin-menu button:focus {
-    background-color: var(--font2);
-    outline: none;
-}
-
-/* Admin content sections */
-.admin-section {
-    padding: 20px;
-    background-color: var(--bg-white);
-    border-radius: 5px;
-    margin-top: 20px;
-    display: none;
-}
-
-/* Table for view records */
-.admin-section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.admin-section table th,
-.admin-section table td {
-    border: 1px solid var(--border);
-    padding: 8px 12px;
-    text-align: left;
-}
-
-.admin-section table th {
-    background-color: var(--border);
-    color: var(--fonts-menu);
-}
-
-/* Forms inside sections */
-.admin-section form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.admin-section form label {
-    font-weight: bold;
-    color: var(--bg-2);
-}
-
-.admin-section form input,
-.admin-section form select,
-.admin-section form textarea,
-.admin-section form button {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 3px;
-    border: 1px solid var(--fonts-menu);
-}
-
-.admin-section form button {
-    width: 150px;
-    background-color: var(--border);
-    color: var(--fonts-menu);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.admin-section form button:hover {
-    background-color: var(--font2);
+    font-weight: 600;
+    background-color: var(--bg-2);
 }
 
 /* Filter game controls */
@@ -1612,6 +1438,12 @@ a.b_link {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    transform: all 0.25s ease;
+}
+
+.close:hover {
+    color: var(--menuColor);
+    scale: 1.1;
 }
 
 /* Cart */
@@ -1757,40 +1589,6 @@ a.b_link {
     scale: 1.1;
 }
 
-/* Checkout */
-/* .checkout .step {
-    border: 1px solid var(--border);
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    background-color: var(--bg-2);
-    color: var(--fonts-menu);
-}
-
-.checkout input {
-    display: block;
-    margin: 8px 0;
-    padding: 8px;
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-}
-
-.checkout button {
-    margin-top: 10px;
-    padding: 8px 18px;
-    background-color: var(--alert);
-    color: var(--fonts-menu);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-.checkout button:hover {
-    background-color: var(--fonts-menu);
-    color: var(--alert);
-} */
-
 .checkout-button {
     display: inline-block;
     padding: 8px 18px;
@@ -1813,7 +1611,7 @@ a.b_link {
 /* Checkout and Payment */
 #payment-iframe {
     width: 100%;
-    height: 380px;
+    height: 300px;
     border: 2px solid var(--menuColor);
     border-radius: 10px;
 
@@ -1844,17 +1642,37 @@ a.b_link {
     align-items: center;
     width: 100%;
     max-width: 320px;
+    gap: 10px;
 }
 
-.iframe1 input {
+.iframe-card {
     width: 100%;
     padding: 10px;
-    margin: 8px 0;
     border: 3px solid var(--menuColor);
     background-color: var(--bg-2);
     color: var(--mercedez-2);
     border-radius: 5px;
     text-align: center;
+    box-sizing: border-box;
+}
+
+.card-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.iframe-date,
+.iframe-cvc {
+    flex: 1;
+    padding: 10px;
+    border: 3px solid var(--menuColor);
+    background-color: var(--bg-2);
+    color: var(--mercedez-2);
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .iframe1 button {
@@ -1902,23 +1720,6 @@ a.b_link {
     color: var(--fonts-menu);
     margin-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* --- RESPONSIVE VIEW FOR MOBILE --- */
