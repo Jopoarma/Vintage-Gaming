@@ -222,12 +222,15 @@ if (loginForm) {
         const userData = localStorage.getItem("user_" + email);
         if (!userData) {
             document.getElementById("loginEmailError").textContent = "No account found with this email.";
+            alert("Error: No account found with this email!");
+            //window.location.reload();
             return;
         }
 
         const user = JSON.parse(userData);
         if (user.password !== password) {
             document.getElementById("loginPasswordError").textContent = "Incorrect password.";
+            alert("Error: Incorrect password!");
             return;
         }
 
