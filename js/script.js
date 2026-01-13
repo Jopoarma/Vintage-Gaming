@@ -1,5 +1,12 @@
+//////////////////////////////////////////////////////////////////////
+//  Assignment: Final Project - Vintage Gaming Store Website        //
+//  Written by: Jorge Polo Arce Madrigal - Student ID: 5702319      //
+//  Course: CST 8285 - Web Programming                              //
+//  Description: A vintage gaming store website featuring a         //
+//      responsive design, carousel, video embeds, shopping cart,   //
+//      and modals for game details and checkout.                   //
+//////////////////////////////////////////////////////////////////////
 //console.log("Script loaded");
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("sponsor-search-form");
     const input = document.getElementById("search-input");
