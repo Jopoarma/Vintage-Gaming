@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Canard PC</name>
+   <tag></tag>
+   <elementGuidId>cde931be-580f-471a-a2e0-a9183a4ba340</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='PC Gamer'])[1]/following::a[1]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>29451f6b-850d-48c1-81e0-d4aa19a9626a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>b_link</value>
+      <webElementGuid>e564b36a-23c5-42b2-aa2a-fd65aa3c3a64</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://www.canardpc.com/</value>
+      <webElementGuid>aea46b69-5cdd-4c6c-a677-f5f487c0d563</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>d7237f27-abf7-489e-b606-435cea39a7bd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rel</name>
+      <type>Main</type>
+      <value>noopener noreferrer</value>
+      <webElementGuid>2125fbb5-86b1-41b0-bc3e-b2c6cbba741d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Canard PC</value>
+      <webElementGuid>bc550e14-0902-4960-a54a-3c3d8647b477</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/main[@class=&quot;wrapperPage&quot;]/div[@class=&quot;topGrid&quot;]/aside[@class=&quot;asideSection&quot;]/a[@class=&quot;b_link&quot;]</value>
+      <webElementGuid>e88ad8b6-9688-4623-a4f2-73488b913bd5</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='PC Gamer'])[1]/following::a[1]</value>
+      <webElementGuid>eb0d81a5-f89a-4411-a56a-bff1fda731c9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Useful Gaming Links'])[1]/following::a[2]</value>
+      <webElementGuid>4339e04c-131d-4063-ae57-e00298e2a871</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Aftermath'])[1]/preceding::a[1]</value>
+      <webElementGuid>5f563fc2-1d8f-4fc1-bed3-50c84ffb9ff4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://www.canardpc.com/')]</value>
+      <webElementGuid>1bbbe8ed-65b8-4faa-a029-1e4a0effa44b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//aside/a[2]</value>
+      <webElementGuid>03d5eeec-016d-4245-9872-3ddc093ab356</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://www.canardpc.com/' and (text() = 'Canard PC' or . = 'Canard PC')]</value>
+      <webElementGuid>fa5cc329-e0e6-4b53-ae14-323af1a43374</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_PC Gamer</name>
+   <tag></tag>
+   <elementGuidId>7059b0af-a368-4230-a978-649b28f0aa71</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>a.b_link</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Useful Gaming Links'])[1]/following::a[1]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>7be3987c-1d7a-4c4f-8aa2-63df19e3a888</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>b_link</value>
+      <webElementGuid>59da3e19-72a2-4b4d-91cd-1b88d13b984c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://www.pcgamer.com/</value>
+      <webElementGuid>409b1ac6-023b-4a82-b5e0-edc19a5b8dd9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>0b2ece04-d161-476a-af79-b4306ef40d09</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rel</name>
+      <type>Main</type>
+      <value>noopener noreferrer</value>
+      <webElementGuid>38a35931-ca17-4bb9-9927-f1d72cc82afd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>PC Gamer</value>
+      <webElementGuid>b14ff8f0-0080-451f-af91-e8a3c96ceebf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/main[@class=&quot;wrapperPage&quot;]/div[@class=&quot;topGrid&quot;]/aside[@class=&quot;asideSection&quot;]/a[@class=&quot;b_link&quot;]</value>
+      <webElementGuid>37300382-c11d-4aad-a823-cccdc3e56ce9</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Useful Gaming Links'])[1]/following::a[1]</value>
+      <webElementGuid>5efb8a27-6120-4b04-97e1-e966f2bc79eb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hotline Miami | WHY YOU SHOULD PLAY'])[1]/following::a[1]</value>
+      <webElementGuid>b9cac18b-093e-4da3-b342-0e04b1a98f6a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Canard PC'])[1]/preceding::a[1]</value>
+      <webElementGuid>567b0e26-fd93-49ad-a1c6-a0775f62d5ae</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, 'https://www.pcgamer.com/')])[2]</value>
+      <webElementGuid>d4ae1361-e700-4666-b130-7f85bcc093ec</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//aside/a</value>
+      <webElementGuid>a6cae8b0-8520-4f9d-828d-8c9baa4a4fd3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://www.pcgamer.com/' and (text() = 'PC Gamer' or . = 'PC Gamer')]</value>
+      <webElementGuid>98f9228a-4903-4d2b-8ad8-b9c2f2b6e817</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

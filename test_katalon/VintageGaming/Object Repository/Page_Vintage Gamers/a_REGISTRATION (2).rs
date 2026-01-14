@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_REGISTRATION (2)</name>
+   <tag></tag>
+   <elementGuidId>a3d73ec2-b433-4de6-9896-78e5ce75655d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.nav-links > a:nth-of-type(3)</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[contains(text(),'REGISTRATION')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>88c9fc2e-8eb2-4451-b5e0-6f3863ac75b7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>Register.html</value>
+      <webElementGuid>25df0e40-264d-4508-add2-a20f86791196</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>REGISTRATION</value>
+      <webElementGuid>42e52a1a-0deb-499d-9739-76f44a3a7893</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/nav[1]/div[@class=&quot;nav-links&quot;]/a[3]</value>
+      <webElementGuid>f3333899-2975-451c-910e-5c0b20d37cb9</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'REGISTRATION')]</value>
+      <webElementGuid>306e45b6-8de1-4a44-a7df-e939f2dfed8a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='STORE'])[1]/following::a[1]</value>
+      <webElementGuid>5f1346e5-22f1-4343-95e9-91a6ee3bfdbb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='LOGIN'])[1]/following::a[2]</value>
+      <webElementGuid>b1cd13bf-e431-423f-8c19-6f41cf17de68</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Eat, sleep, play, repeat!'])[1]/preceding::a[1]</value>
+      <webElementGuid>bb14050a-2d43-4741-9857-ad9b75b6d172</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='REGISTRATION']/parent::*</value>
+      <webElementGuid>4a31b061-e08a-4648-8159-f589ad7e7f84</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'Register.html')]</value>
+      <webElementGuid>63f80780-b4c2-4390-95ff-0cde1aee405e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//nav/div/a[3]</value>
+      <webElementGuid>1cb473dc-7fd6-4f1c-b201-97e686de4251</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'Register.html' and (text() = 'REGISTRATION' or . = 'REGISTRATION')]</value>
+      <webElementGuid>aed62411-1a2c-4829-9d77-9fc8e7abb2d9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_All Platforms                PC     _4835e2 (1)</name>
+   <tag></tag>
+   <elementGuidId>8756fb73-5e9c-4066-8a02-f3274a49cb1f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#filter-platform</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='filter-platform']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>408e5dd7-5487-4021-8062-46bbc62230d7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>filter-platform</value>
+      <webElementGuid>1e261528-0ff7-4f07-8970-973b48d7a311</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+                All Platforms
+                PC
+                PS5
+                Switch
+            </value>
+      <webElementGuid>0904c3ba-c36e-475d-9182-3ba7a80bafa9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;filter-platform&quot;)</value>
+      <webElementGuid>b762f3e4-7b8f-4964-ad6b-f507d173118e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='filter-platform']</value>
+      <webElementGuid>69f55612-e9d1-4d44-afc8-824b9f137179</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Eat, sleep, play, repeat!'])[1]/following::select[2]</value>
+      <webElementGuid>f6c22199-47cb-444f-8785-552cb6f05456</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cyberpunk 2077'])[1]/preceding::select[2]</value>
+      <webElementGuid>86a36f19-3c8e-4c79-b581-b193ea8ea83d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Price: $69.99'])[1]/preceding::select[2]</value>
+      <webElementGuid>c059ce10-257f-4bbf-8c45-6949d6846141</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//select[2]</value>
+      <webElementGuid>325ce5dc-59dc-4c3f-89c0-c2999f8c8636</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@id = 'filter-platform' and (text() = '
+                All Platforms
+                PC
+                PS5
+                Switch
+            ' or . = '
+                All Platforms
+                PC
+                PS5
+                Switch
+            ')]</value>
+      <webElementGuid>f4b61048-29e9-4922-9cb8-477afa9f532b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

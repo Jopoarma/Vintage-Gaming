@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_STORE (2)</name>
+   <tag></tag>
+   <elementGuidId>6b6e8350-584b-4fa2-a935-5292c5451c4b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.nav-links > a:nth-of-type(2)</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[contains(text(),'STORE')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>63e1e653-7cc7-4735-9afc-3236388caad8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>shop.html</value>
+      <webElementGuid>16aab0d3-defb-4d7c-aa8c-0e581ef5201f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>STORE</value>
+      <webElementGuid>283735f0-d3a4-44f3-80ee-d0a03143b2c2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/nav[1]/div[@class=&quot;nav-links&quot;]/a[2]</value>
+      <webElementGuid>69fcfd30-37d9-47ea-acc3-b9cd977745fc</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'STORE')]</value>
+      <webElementGuid>3cb10eec-1900-4600-9aa5-68542c58f14a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='LOGIN'])[1]/following::a[1]</value>
+      <webElementGuid>66ca0a56-b322-45c9-9e2b-9ac79426dac0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='REGISTRATION'])[1]/preceding::a[1]</value>
+      <webElementGuid>29ab31a5-d59c-4c9d-aa00-27cce0bc9494</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Eat, sleep, play, repeat!'])[1]/preceding::a[2]</value>
+      <webElementGuid>cb4ad2ec-8989-4b5c-bbe2-50479cf8b707</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='STORE']/parent::*</value>
+      <webElementGuid>0b766556-3398-4fe9-b19b-5d8cf30f4248</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'shop.html')]</value>
+      <webElementGuid>5865e77b-7d47-467d-9ff4-db886121d98e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//nav/div/a[2]</value>
+      <webElementGuid>aca9cd87-8f7f-4b7f-bb93-760a04d4b4c8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'shop.html' and (text() = 'STORE' or . = 'STORE')]</value>
+      <webElementGuid>7be4d91f-6c00-48e2-9dbb-0bc6aac635e3</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

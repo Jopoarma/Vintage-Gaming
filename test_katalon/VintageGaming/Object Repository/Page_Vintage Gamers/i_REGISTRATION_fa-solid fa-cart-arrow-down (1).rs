@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_REGISTRATION_fa-solid fa-cart-arrow-down (1)</name>
+   <tag></tag>
+   <elementGuidId>717fc3c4-2aeb-42d0-87d3-83d2f57e4295</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>i.fa-solid.fa-cart-arrow-down</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@id='view-cart-btn']/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>16389fed-02c0-43c7-a422-5fd22a620507</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>fa-solid fa-cart-arrow-down</value>
+      <webElementGuid>ad3c20a5-6f51-44cc-af3c-7ce7b9b585a1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;view-cart-btn&quot;)/i[@class=&quot;fa-solid fa-cart-arrow-down&quot;]</value>
+      <webElementGuid>a33ef43f-9a31-44d1-b50d-d75f86863430</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//button[@id='view-cart-btn']/i</value>
+      <webElementGuid>9b7985be-17c4-43af-94de-17a8b14d6708</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/button/i</value>
+      <webElementGuid>4abfef2c-8ac7-4b45-80fb-758c9356620f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

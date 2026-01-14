@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_CONTACT US_fa-brands fa-github</name>
+   <tag></tag>
+   <elementGuidId>b115a7b0-d51b-4289-a708-ec17fa381650</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>i.fa-brands.fa-github</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[3]/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>d63e2120-af23-4996-8bb1-1d049b3581ca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>fa-brands fa-github</value>
+      <webElementGuid>aceb735b-398c-4d1e-afdb-292911499ccb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/footer[1]/div[@class=&quot;contactUs&quot;]/div[@class=&quot;contactUs-icons&quot;]/a[3]/i[@class=&quot;fa-brands fa-github&quot;]</value>
+      <webElementGuid>8ce8ec89-e518-462c-aa94-82361cf2e317</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a[3]/i</value>
+      <webElementGuid>47a393af-2539-47d6-bbd0-18fa3ea2a705</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

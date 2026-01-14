@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_All Genres                Action    _8d8ae2</name>
+   <tag></tag>
+   <elementGuidId>454cef9c-b9a7-4b9e-8952-0f042bd6e48a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#filter-genre</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='filter-genre']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>1db0f242-0593-49cd-bf5e-a0b06da3fef9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>filter-genre</value>
+      <webElementGuid>f2b94ab7-dd80-493d-9d61-6fec43c83324</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+                All Genres
+                Action
+                Shooter
+                RPG
+                Adventure
+                Platformer
+            </value>
+      <webElementGuid>8706bb55-fb23-484c-9d23-aa680ce320f5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;filter-genre&quot;)</value>
+      <webElementGuid>0c1df7ef-a0f6-4659-bb43-378418b8fdf3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='filter-genre']</value>
+      <webElementGuid>c932fc4f-b699-4ef6-ad35-9a7f12254a73</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Eat, sleep, play, repeat!'])[1]/following::select[1]</value>
+      <webElementGuid>327e3d52-7c4c-401f-ad64-84a64f318e7a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cyberpunk 2077'])[1]/preceding::select[3]</value>
+      <webElementGuid>8dcd9b56-266f-4d97-9309-4d6969081e0f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Price: $69.99'])[1]/preceding::select[3]</value>
+      <webElementGuid>82422385-cb1f-43e3-a3cd-52c4ceb95ac4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//select</value>
+      <webElementGuid>a81917d5-8306-468f-9883-6f66566f28fb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@id = 'filter-genre' and (text() = '
+                All Genres
+                Action
+                Shooter
+                RPG
+                Adventure
+                Platformer
+            ' or . = '
+                All Genres
+                Action
+                Shooter
+                RPG
+                Adventure
+                Platformer
+            ')]</value>
+      <webElementGuid>d7352efa-228b-4a1d-a3fe-736fc7977f55</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SmokeTest_Login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f3f6887d-2e75-45da-bc73-bbfd6f8b86d6</testCaseGuid>
+</TestCaseEntity>

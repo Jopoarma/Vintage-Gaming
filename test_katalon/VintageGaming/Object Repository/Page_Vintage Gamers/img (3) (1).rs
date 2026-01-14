@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>img (3) (1)</name>
+   <tag></tag>
+   <elementGuidId>228445ea-0fbc-4d6e-aa0a-018da688b3b4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>img[alt=&quot;Cyberpunk 2077&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//section[@id='game-catalog']/div/img</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>img</value>
+      <webElementGuid>cbce8e87-0c0a-47ac-aec2-fdd7a7433d13</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg</value>
+      <webElementGuid>4801a172-bac1-4ad4-b3bc-7e828281cc6e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>alt</name>
+      <type>Main</type>
+      <value>Cyberpunk 2077</value>
+      <webElementGuid>f866a138-0fc2-4f06-8a24-7c786d04898d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;game-catalog&quot;)/div[@class=&quot;product&quot;]/img[1]</value>
+      <webElementGuid>17e20b64-0c6b-4dad-9abe-4295e7fb9ded</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//section[@id='game-catalog']/div/img</value>
+      <webElementGuid>d81dea3b-29b2-45be-9a00-5e90f4d628b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:img</name>
+      <type>Main</type>
+      <value>//img[@alt='Cyberpunk 2077']</value>
+      <webElementGuid>13220640-dc05-4cfb-a4ff-b89e820fb7b9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/img</value>
+      <webElementGuid>6e68ff39-2f6a-4bb1-9f76-b560322d63a4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//img[@src = 'https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg' and @alt = 'Cyberpunk 2077']</value>
+      <webElementGuid>f126604a-84e5-4531-beb7-d1159af6d69e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

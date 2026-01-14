@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SmokeTest_Register</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f2e68494-2507-4196-b8b0-ea57cb0d707f</testCaseGuid>
+</TestCaseEntity>

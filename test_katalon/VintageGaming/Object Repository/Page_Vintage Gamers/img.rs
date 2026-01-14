@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>img</name>
+   <tag></tag>
+   <elementGuidId>9a74d5ba-4885-44d4-8fcc-37ab0feec778</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>img[alt=&quot;F1 Montreal Logo&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//img[@alt='F1 Montreal Logo']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>img</value>
+      <webElementGuid>9694e6af-1a60-48eb-8a9f-c438de091e29</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>img/logo.png</value>
+      <webElementGuid>72dfe49a-734c-4474-9e44-a739c07d5355</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>alt</name>
+      <type>Main</type>
+      <value>F1 Montreal Logo</value>
+      <webElementGuid>c0c59cbb-f4ff-4b29-922d-a2461942d7a6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/nav[1]/a[@class=&quot;logo-link&quot;]/img[1]</value>
+      <webElementGuid>5befce4d-d2aa-4b7a-8d67-04b10cb32b60</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:img</name>
+      <type>Main</type>
+      <value>//img[@alt='F1 Montreal Logo']</value>
+      <webElementGuid>98794a8e-dda4-4f42-8351-d378bceaad73</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//nav/a/img</value>
+      <webElementGuid>856f814e-5170-4972-b319-f11625db90c3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//img[@src = 'img/logo.png' and @alt = 'F1 Montreal Logo']</value>
+      <webElementGuid>d24b0381-98b8-45b1-999e-0e183b987eaf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//section[@id='game-catalog']/div/img</value>
+      <webElementGuid>5c08b52c-de82-4f32-a385-0e25e670f89f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:img</name>
+      <type>Main</type>
+      <value>//img[@alt='Cyberpunk 2077']</value>
+      <webElementGuid>f1bf9b2b-dd04-44e6-9314-e2b84099c6c1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/img</value>
+      <webElementGuid>c52776c5-3f75-4053-bfd0-beb38b25944a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//img[@src = 'https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg' and @alt = 'Cyberpunk 2077']</value>
+      <webElementGuid>47dd0ec8-3065-4300-8c2c-8ea2ddc52794</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
