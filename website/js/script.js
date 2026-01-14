@@ -92,9 +92,10 @@ window.addEventListener("DOMContentLoaded", () => {
     if (user) {
         const nickname = JSON.parse(localStorage.getItem("user_" + user)).nickname;
         const loggedHTML = `
-            <span class="sponsor-title" style="color:var(--fonts-menu); margin:auto 15px auto 50px; text-transform: uppercase">Hi, ${nickname}</span>
+            <span id="logged-nickname" class="sponsor-title" style="...">Hi, ${nickname}</span>
             <a href="javascript:void(0)" class="nav-logout-btn" onclick="logoutFromNav()">Logout</a>
         `;
+
         nav.innerHTML += loggedHTML;
     }
 });
@@ -113,13 +114,13 @@ if (regForm) {
     regForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        // const name = document.getElementById("name").value.trim();
-        // const lastName = document.getElementById("lastName").value.trim();
-        // const ageInput = document.getElementById("age").value.trim();
-        // const age = parseInt(ageInput, 10);
-        // const nickname = document.getElementById("nickname").value.trim();
-        // const address = document.getElementById("address").value.trim();
-        // const email = document.getElementById("emailReg").value.trim();
+        const name = document.getElementById("name").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const ageInput = document.getElementById("age").value.trim();
+        const age = parseInt(ageInput, 10);
+        const nickname = document.getElementById("nickname").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const email = document.getElementById("emailReg").value.trim();
         const password = document.getElementById("password").value;
         const passInput = document.getElementById("password");
 

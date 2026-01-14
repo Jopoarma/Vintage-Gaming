@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="32" time="166.805" timestamp="2026-01-13T22:09:50.299020-05:00" hostname="Jopoarma"><testcase classname="test_1" name="test_login_and_purchase_flow" time="9.326" /><testcase classname="test_10_footerLinks" name="test_footer_developer_links" time="4.211" /><testcase classname="test_11_registrationOK" name="test_register_new_user" time="7.095" /><testcase classname="test_12_registrationUnderage" name="test_registration_underage" time="3.991"><failure message="AssertionError: Age validation error should be shown&#10;assert '' != ''&#10; +  where '' = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;aea2103f66c7a5c901ed175b97e45536&quot;, element=&quot;f.383226249C9E8E36FD34772B059A7CF8.d.A4EA2014457AC3E1038936F92B1517F2.e.56&quot;)&gt;.text">driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="aea2103f66c7a5c901ed175b97e45536")&gt;
+
+    def test_registration_underage(driver):
+        driver.get(URL)
+    
+        driver.find_element(By.ID, "name").send_keys("Ana")
+        driver.find_element(By.ID, "lastName").send_keys("Test")
+        driver.find_element(By.ID, "age").send_keys("15")
+        driver.find_element(By.ID, "nickname").send_keys("Tester99")
+        driver.find_element(By.ID, "address").send_keys("456 Main Street")
+        driver.find_element(By.ID, "emailReg").send_keys("underage@test.com")
+        driver.find_element(By.ID, "password").send_keys("Strong@123")
+    
+        driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
+    
+        age_error = WebDriverWait(driver, 5).until(
+            lambda d: d.find_element(By.ID, "ageError")
+        )
+    
+&gt;       assert age_error.text != "", "Age validation error should be shown"
+E       AssertionError: Age validation error should be shown
+E       assert '' != ''
+E        +  where '' = &lt;selenium.webdriver.remote.webelement.WebElement (session="aea2103f66c7a5c901ed175b97e45536", element="f.383226249C9E8E36FD34772B059A7CF8.d.A4EA2014457AC3E1038936F92B1517F2.e.56")&gt;.text
+
+test_12_registrationUnderage.py:33: AssertionError</failure></testcase><testcase classname="test_13_registrationWeakPass" name="test_registration_weak_password" time="4.062"><failure message="AssertionError: Password validation error should be shown&#10;assert '' != ''&#10; +  where '' = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;7bf11826290d2d01eb47176da15f5da3&quot;, element=&quot;f.719CED7BCAC00E7FEB1A9560892B280C.d.77CB42DB90FA0B2DDD4DC9F8F4BE0948.e.56&quot;)&gt;.text">driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="7bf11826290d2d01eb47176da15f5da3")&gt;
+
+    def test_registration_weak_password(driver):
+        driver.get(URL)
+    
+        driver.find_element(By.ID, "name").send_keys("Mike")
+        driver.find_element(By.ID, "lastName").send_keys("Smith")
+        driver.find_element(By.ID, "age").send_keys("25")
+        driver.find_element(By.ID, "nickname").send_keys("PlayerX1")
+        driver.find_element(By.ID, "address").send_keys("789 Queen Street")
+        driver.find_element(By.ID, "emailReg").send_keys("weakpass@test.com")
+        driver.find_element(By.ID, "password").send_keys("abc123")
+    
+        driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
+    
+        password_error = WebDriverWait(driver, 5).until(
+            lambda d: d.find_element(By.ID, "passwordError")
+        )
+    
+&gt;       assert password_error.text != "", "Password validation error should be shown"
+E       AssertionError: Password validation error should be shown
+E       assert '' != ''
+E        +  where '' = &lt;selenium.webdriver.remote.webelement.WebElement (session="7bf11826290d2d01eb47176da15f5da3", element="f.719CED7BCAC00E7FEB1A9560892B280C.d.77CB42DB90FA0B2DDD4DC9F8F4BE0948.e.56")&gt;.text
+
+test_13_registrationWeakPass.py:33: AssertionError</failure></testcase><testcase classname="test_14_buyLogged" name="test_checkout_logged_user" time="5.044" /><testcase classname="test_15_buyNotLogged" name="test_checkout_without_login" time="14.098"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;Symbols not available. Dumping unresolved backtrace:&#10;&#09;0x7ff6128188d5&#10;&#09;0x7ff612818930&#10;&#09;0x7ff6125f165d&#10;&#09;0x7ff612649a33&#10;&#09;0x7ff612649d3c&#10;&#09;0x7ff61269df67&#10;&#09;0x7ff61269ac97&#10;&#09;0x7ff61263ac29&#10;&#09;0x7ff61263ba93&#10;&#09;0x7ff612b30620&#10;&#09;0x7ff612b2af60&#10;&#09;0x7ff612b496c6&#10;&#09;0x7ff612835dd4&#10;&#09;0x7ff61283ed7c&#10;&#09;0x7ff612821ff4&#10;&#09;0x7ff6128221a5&#10;&#09;0x7ff612807ed2&#10;&#09;0x7ff91678e8d7&#10;&#09;0x7ff916aec53c">driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="ac716252ee1466a86f3fc49f70f45060")&gt;
+
+    def test_checkout_without_login(driver):
+&gt;       open_first_product(driver)
+
+test_15_buyNotLogged.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+conftest.py:95: in open_first_product
+    product = WebDriverWait(driver, 10).until(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="ac716252ee1466a86f3fc49f70f45060")&gt;, method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x000001A8EC2DDDA0&gt;, message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Parameters:
+        -----------
+        method: callable(WebDriver)
+            - A callable object that takes a WebDriver instance as an argument.
+    
+        message: str
+            - Optional message for :exc:`TimeoutException`
+    
+        Return:
+        -------
+        object: T
+            - The result of the last call to `method`
+    
+        Raises:
+        -------
+        TimeoutException
+            - If 'method' does not return a truthy value within the WebDriverWait
+            object's timeout
+    
+        Example:
+        --------
+        &gt;&gt;&gt; from selenium.webdriver.common.by import By
+        &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+        &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+    
+        # Wait until an element is visible on the page
+        &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+        &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+        &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message: 
+E       Stacktrace:
+E       Symbols not available. Dumping unresolved backtrace:
+E       	0x7ff6128188d5
+E       	0x7ff612818930
+E       	0x7ff6125f165d
+E       	0x7ff612649a33
+E       	0x7ff612649d3c
+E       	0x7ff61269df67
+E       	0x7ff61269ac97
+E       	0x7ff61263ac29
+E       	0x7ff61263ba93
+E       	0x7ff612b30620
+E       	0x7ff612b2af60
+E       	0x7ff612b496c6
+E       	0x7ff612835dd4
+E       	0x7ff61283ed7c
+E       	0x7ff612821ff4
+E       	0x7ff6128221a5
+E       	0x7ff612807ed2
+E       	0x7ff91678e8d7
+E       	0x7ff916aec53c
+
+..\..\..\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\support\wait.py:138: TimeoutException</failure></testcase><testcase classname="test_16_addRemoveCart" name="test_add_two_remove_one" time="4.575" /><testcase classname="test_17_cartIcon" name="test_open_cart_with_icon" time="4.261" /><testcase classname="test_18_sortPrice" name="test_sort_low_to_high" time="5.326" /><testcase classname="test_19_filterGenere" name="test_filter_rpg" time="5.280" /><testcase classname="test_2" name="test_login[admin@vintage-gaming.com-J0p0@dmin]" time="4.170" /><testcase classname="test_2" name="test_login[admin@vintage-gaming.com-1234@admin]" time="1.758"><failure message="AssertionError: Invalid password for user: admin@vintage-gaming.com&#10;assert False">username = 'admin@vintage-gaming.com', password = '1234@admin'
+
+    @pytest.mark.parametrize("username,password", load_users(r"c:\Users\jopoa\Documents\tests\report\users_test.csv"))
+    def test_login(username, password):
+        driver = webdriver.Chrome()
+        driver.maximize_window()
+        url = "http://127.0.0.1:5500/Vintage-Gaming/Login.html"
+    
+        driver.get(url)
+    
+        user_input = driver.find_element(By.ID, "loginEmail")
+        pass_input = driver.find_element(By.ID, "loginPassword")
+        login_btn = driver.find_element(By.ID, "loginBtn")
+    
+        user_input.clear()
+        pass_input.clear()
+        user_input.send_keys(username)
+        pass_input.send_keys(password)
+        login_btn.click()
+    
+        # Wait for alert
+        WebDriverWait(driver, 10).until(EC.alert_is_present())
+        alert = driver.switch_to.alert
+        alert_text = alert.text
+        alert.accept()
+    
+        # Assert based on alert text
+        if "Login Successfully!" in alert_text:
+            # Logout to reset state
+            logout_btn = driver.find_element(By.ID, "logoutBtn")
+            logout_btn.click()
+            WebDriverWait(driver, 5).until(EC.alert_is_present())
+            driver.switch_to.alert.accept()
+            assert True, f"Login successful for {username}"
+        elif "No account found" in alert_text:
+            assert False, f"Invalid user: {username}"
+        elif "Incorrect password" in alert_text:
+&gt;           assert False, f"Invalid password for user: {username}"
+E           AssertionError: Invalid password for user: admin@vintage-gaming.com
+E           assert False
+
+test_2.py:53: AssertionError</failure></testcase><testcase classname="test_2" name="test_login[user@vintage-gaming.com-J0p0@dmin]" time="1.880"><failure message="AssertionError: Invalid user: user@vintage-gaming.com&#10;assert False">username = 'user@vintage-gaming.com', password = 'J0p0@dmin'
+
+    @pytest.mark.parametrize("username,password", load_users(r"c:\Users\jopoa\Documents\tests\report\users_test.csv"))
+    def test_login(username, password):
+        driver = webdriver.Chrome()
+        driver.maximize_window()
+        url = "http://127.0.0.1:5500/Vintage-Gaming/Login.html"
+    
+        driver.get(url)
+    
+        user_input = driver.find_element(By.ID, "loginEmail")
+        pass_input = driver.find_element(By.ID, "loginPassword")
+        login_btn = driver.find_element(By.ID, "loginBtn")
+    
+        user_input.clear()
+        pass_input.clear()
+        user_input.send_keys(username)
+        pass_input.send_keys(password)
+        login_btn.click()
+    
+        # Wait for alert
+        WebDriverWait(driver, 10).until(EC.alert_is_present())
+        alert = driver.switch_to.alert
+        alert_text = alert.text
+        alert.accept()
+    
+        # Assert based on alert text
+        if "Login Successfully!" in alert_text:
+            # Logout to reset state
+            logout_btn = driver.find_element(By.ID, "logoutBtn")
+            logout_btn.click()
+            WebDriverWait(driver, 5).until(EC.alert_is_present())
+            driver.switch_to.alert.accept()
+            assert True, f"Login successful for {username}"
+        elif "No account found" in alert_text:
+&gt;           assert False, f"Invalid user: {username}"
+E           AssertionError: Invalid user: user@vintage-gaming.com
+E           assert False
+
+test_2.py:51: AssertionError</failure></testcase><testcase classname="test_2" name="test_login[user@vintage-gaming.com-1234@admin]" time="1.796"><failure message="AssertionError: Invalid user: user@vintage-gaming.com&#10;assert False">username = 'user@vintage-gaming.com', password = '1234@admin'
+
+    @pytest.mark.parametrize("username,password", load_users(r"c:\Users\jopoa\Documents\tests\report\users_test.csv"))
+    def test_login(username, password):
+        driver = webdriver.Chrome()
+        driver.maximize_window()
+        url = "http://127.0.0.1:5500/Vintage-Gaming/Login.html"
+    
+        driver.get(url)
+    
+        user_input = driver.find_element(By.ID, "loginEmail")
+        pass_input = driver.find_element(By.ID, "loginPassword")
+        login_btn = driver.find_element(By.ID, "loginBtn")
+    
+        user_input.clear()
+        pass_input.clear()
+        user_input.send_keys(username)
+        pass_input.send_keys(password)
+        login_btn.click()
+    
+        # Wait for alert
+        WebDriverWait(driver, 10).until(EC.alert_is_present())
+        alert = driver.switch_to.alert
+        alert_text = alert.text
+        alert.accept()
+    
+        # Assert based on alert text
+        if "Login Successfully!" in alert_text:
+            # Logout to reset state
+            logout_btn = driver.find_element(By.ID, "logoutBtn")
+            logout_btn.click()
+            WebDriverWait(driver, 5).until(EC.alert_is_present())
+            driver.switch_to.alert.accept()
+            assert True, f"Login successful for {username}"
+        elif "No account found" in alert_text:
+&gt;           assert False, f"Invalid user: {username}"
+E           AssertionError: Invalid user: user@vintage-gaming.com
+E           assert False
+
+test_2.py:51: AssertionError</failure></testcase><testcase classname="test_20_loginLogoutOkay" name="test_20_login_and_logout_registered_user" time="5.164" /><testcase classname="test_21_loginUnregistered" name="test_21_login_unregistered_user" time="4.435" /><testcase classname="test_22_forgotPassOkay" name="test_22_forgot_password_registered" time="4.338" /><testcase classname="test_23_forgotPassUnregistered" name="test_23_forgot_password_unregistered" time="4.383"><failure message="AssertionError: assert 'password reset link' in 'error: email not found in our system. try again.'&#10; +  where 'error: email not found in our system. try again.' = &lt;built-in method lower of str object at 0x000001A8EC3CA870&gt;()&#10; +    where &lt;built-in method lower of str object at 0x000001A8EC3CA870&gt; = 'ERROR: Email not found in our System. Try again.'.lower&#10; +      where 'ERROR: Email not found in our System. Try again.' = &lt;selenium.webdriver.common.alert.Alert object at 0x000001A8EC2B6A90&gt;.text">driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="cc3f6c8e77da8c49eb10df98685b5bbd")&gt;
+
+    def test_23_forgot_password_unregistered(driver):
+        driver.get(LOGIN)
+    
+        # Click the forgot password button first
+        driver.find_element(By.ID, "forgotPass").click()
+    
+        # Wait for the prompt to appear
+        WebDriverWait(driver, 5).until(EC.alert_is_present())
+    
+        # Switch to prompt, type unregistered email, and accept
+        prompt = driver.switch_to.alert
+        prompt.send_keys("wrong@example.com")
+        prompt.accept()
+    
+        # Now wait for the resulting alert with error message
+        alert = WebDriverWait(driver, 5).until(EC.alert_is_present())
+&gt;       assert "password reset link" in alert.text.lower()  # This would fail for wrong email
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert 'password reset link' in 'error: email not found in our system. try again.'
+E        +  where 'error: email not found in our system. try again.' = &lt;built-in method lower of str object at 0x000001A8EC3CA870&gt;()
+E        +    where &lt;built-in method lower of str object at 0x000001A8EC3CA870&gt; = 'ERROR: Email not found in our System. Try again.'.lower
+E        +      where 'ERROR: Email not found in our System. Try again.' = &lt;selenium.webdriver.common.alert.Alert object at 0x000001A8EC2B6A90&gt;.text
+
+test_23_forgotPassUnregistered.py:22: AssertionError</failure></testcase><testcase classname="test_24_loginGoShop" name="test_24_login_and_go_to_shop" time="4.813" /><testcase classname="test_25_registerLoginLogout" name="test_register_and_login" time="4.485" /><testcase classname="test_26_forgotPassNewUser" name="test_register_and_forgot_password" time="8.087" /><testcase classname="test_27_cartAllPages" name="test_27_access_cart_from_all_pages" time="5.344" /><testcase classname="test_28_chekoutBlocked" name="test_28_login_username_display" time="4.644" /><testcase classname="test_3" name="test_store_rpg_filter" time="6.048" /><testcase classname="test_4" name="test_youtube_video_iframe" time="4.151" /><testcase classname="test_5" name="test_store_first_product_details" time="4.613" /><testcase classname="test_6" name="test_open_store_and_click_product[chrome]" time="3.993" /><testcase classname="test_6" name="test_open_store_and_click_product[firefox]" time="9.020" /><testcase classname="test_7_sponsors" name="test_header_sponsor_links" time="4.018" /><testcase classname="test_8_navigation" name="test_navigation_links" time="3.988" /><testcase classname="test_9_carousel" name="test_carousel_links" time="4.080" /></testsuite></testsuites>
